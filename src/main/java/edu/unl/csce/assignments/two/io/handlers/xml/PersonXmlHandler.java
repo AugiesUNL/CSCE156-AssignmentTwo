@@ -1,14 +1,12 @@
 package edu.unl.csce.assignments.two.io.handlers.xml;
 
 import com.thoughtworks.xstream.XStream;
-import edu.unl.csce.assignments.two.Main;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import edu.unl.csce.assignments.two.data.Address;
 import edu.unl.csce.assignments.two.data.Person;
 import edu.unl.csce.assignments.two.data.Persons;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class PersonXmlHandler {
@@ -17,12 +15,12 @@ public class PersonXmlHandler {
     private final XStream xStream;
 
     public PersonXmlHandler(){
-        xStream = new XStream()
+        xStream = new XStream(new DomDriver());
         xStream.alias("person",Person.class);
         xStream.alias("persons", Persons.class);
         xStream.alias("Address", Address.class);
-        xStream.addImplicitCollection(Person.class,"emails");
-        xStream.addImplicitCollection(Persons.class,"persons");
+        xStream.aliasField("Address",Person.class,"address");
+        xStream.addImplicitCollection(Persons.class,"persons", Person.class);
     }
 
     public List<Person> getPeopleFromXml(){

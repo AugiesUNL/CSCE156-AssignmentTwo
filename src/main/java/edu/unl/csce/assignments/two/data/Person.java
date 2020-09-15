@@ -4,30 +4,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
-    private final String personCode;
+    private final String code;
     private final String lastName;
     private final String firstName;
     private final Address address;
     private final List<String> emails;
 
-    public Person(String personCode, String lastName, String firstName, Address address, List<String> emails) {
-        this.personCode = personCode;
+    public Person(String code, String lastName, String firstName, Address address, List<String> emails) {
+        this.code = code;
         this.lastName = lastName;
         this.firstName = firstName;
         this.address = address;
         this.emails = emails;
     }
 
-    public Person(String personCode, String lastName, String firstName, Address address) {
-        this.personCode = personCode;
+    public Person(String code, String lastName, String firstName, Address address) {
+        this.code = code;
         this.lastName = lastName;
         this.firstName = firstName;
         this.address = address;
         this.emails = new ArrayList<>();
     }
 
-    public String getPersonCode() {
-        return personCode;
+    @Override
+    public String toString() {
+        return "Person{" +
+                "code='" + code + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", address=" + address +
+                ", emails=" + emails +
+                '}';
+    }
+
+    public String getCode() {
+        return code;
     }
 
     public String getLastName() {

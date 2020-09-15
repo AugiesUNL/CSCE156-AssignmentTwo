@@ -1,6 +1,5 @@
 package edu.unl.csce.assignments.two.io.handlers.dat;
 
-import edu.unl.csce.assignments.two.Main;
 import edu.unl.csce.assignments.two.data.Address;
 import edu.unl.csce.assignments.two.data.Person;
 import edu.unl.csce.assignments.two.io.utils.Utils;
@@ -41,7 +40,7 @@ public class PersonDatHandler {
      */
     public String serialize(Person person){
         StringBuilder sb = new StringBuilder();
-        sb.append(person.getPersonCode())
+        sb.append(person.getCode())
                 .append(";")
                 .append(person.getLastName())
                 .append(", ")

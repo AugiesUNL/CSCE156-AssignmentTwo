@@ -3,6 +3,7 @@ package edu.unl.csce.assignments.two;
 import edu.unl.csce.assignments.two.data.Person;
 import edu.unl.csce.assignments.two.managers.IoManager;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Main {
@@ -13,7 +14,7 @@ public class Main {
         ioManager = new IoManager();
         people = new ArrayList<>();
         people.addAll(ioManager.getPersonXmlHandler().getPeopleFromXml());
-        System.out.println(people);
+        System.out.println(people); //Is actually everyone from the xml file.
     }
 
     public static IoManager getIoManager(){
