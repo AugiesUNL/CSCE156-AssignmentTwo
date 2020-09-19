@@ -1,153 +1,150 @@
 {
-"persons": [
-  {
-    "code": "abc2",
-    "firstName": " Wiktoria",
-    "lastName": "Medrano",
-    "Address": {
-      "street": "1025 S Street st.",
-      "city": "Chichago",
-      "state": "IL",
-      "zip": "60613",
-      "country": "USA"
+  "persons": [
+    {
+      "code": "abc2",
+      "lastName": "Medrano",
+      "firstName": "Wiktoria",
+      "address": {
+        "street": "1025 S Street st.",
+        "city": "Chichago",
+        "state": "IL",
+        "zip": "60613",
+        "country": "USA"
+      },
+      "emails": [
+        "therealwiki@gmail.com",
+        "wiktoria.m@yahoo.com"
+      ]
     },
-    "emails": [
-      "therealwiki@gmail.com",
-      "wiktoria.m@yahoo.com"
-    ]
-  },
-  {
-    "code": "biz45",
-    "firstName": " Fenton",
-    "lastName": "Hart",
-    "Address": {
-      "street": "1 Wall Street",
-      "city": "New York",
-      "state": "NY",
-      "zip": "10005-0012",
-      "country": "USA"
+    {
+      "code": "biz45",
+      "lastName": "Hart",
+      "firstName": "Fenton",
+      "address": {
+        "street": "1 Wall Street",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10005-0012",
+        "country": "USA"
+      },
+      "emails": [
+        "fentony@windstream.net"
+      ]
     },
-    "emails": [
-      "fentony@windstream.net"
-    ]
-  },
-  {
-    "code": "zyx321",
-    "firstName": " Ayaana",
-    "lastName": "Dolan",
-    "Address": {
-      "street": "23450 Cabo San Lucas",
-      "city": " Los Cabos",
-      "state": " BCS",
-      "zip": "",
-      "country": " Mexico"
+    {
+      "code": "zyx321",
+      "lastName": "Dolan",
+      "firstName": "Ayaana",
+      "address": {
+        "street": "23450 Cabo San Lucas",
+        "city": "Los Cabos",
+        "state": "BCS",
+        "zip": "",
+        "country": "Mexico"
+      },
+      "emails": []
     },
-    "emails": [
-      ""
-    ]
-  },
-  {
-    "code": "j3bdl5",
-    "firstName": " Anthony",
-    "lastName": "Salazar",
-    "Address": {
-      "street": "6700 Vine St",
-      "city": "Lincoln",
-      "state": "NE",
-      "zip": "68505",
-      "country": "USA"
+    {
+      "code": "j3bdl5",
+      "lastName": "Salazar",
+      "firstName": "Anthony",
+      "address": {
+        "street": "6700 Vine St",
+        "city": "Lincoln",
+        "state": "NE",
+        "zip": "68505",
+        "country": "USA"
+      },
+      "emails": [
+        "slitherysalazar@hotmail.com"
+      ]
     },
-    "emails": [
-      "slitherysalazar@hotmail.com"
-    ]
-  },
-  {
-    "code": "lejnr4",
-    "firstName": " Kenan",
-    "lastName": "Spooner",
-    "Address": {
-      "street": "123 N 1st Street",
-      "city": "Compton",
-      "state": "CA",
-      "zip": "90210",
-      "country": "USA"
+    {
+      "code": "lejnr4",
+      "lastName": "Spooner",
+      "firstName": "Kenan",
+      "address": {
+        "street": "123 N 1st Street",
+        "city": "Compton",
+        "state": "CA",
+        "zip": "90210",
+        "country": "USA"
+      },
+      "emails": [
+        "kspoons@emailservice.domain",
+        "thespoonman@soundgarden.com"
+      ]
     },
-    "emails": [
-      "kspoons@emailservice.domain",
-      "thespoonman@soundgarden.com"
-    ]
-  },
-  {
-    "code": "zvlnkd",
-    "firstName": " Alba",
-    "lastName": "Vang",
-    "Address": {
-      "street": "521 Adam Street",
-      "city": "Omaha",
-      "state": "NE",
-      "zip": "68471",
-      "country": "USA"
+    {
+      "code": "zvlnkd",
+      "lastName": "Vang",
+      "firstName": "Alba",
+      "address": {
+        "street": "521 Adam Street",
+        "city": "Omaha",
+        "state": "NE",
+        "zip": "68471",
+        "country": "USA"
+      },
+      "emails": [
+        "av1834@hotmail.com"
+      ]
     },
-    "emails": [
-      "av1834@hotmail.com"
-    ]
-  },
-  {
-    "code": "zdvker6u",
-    "firstName": " Terry",
-    "lastName": "Hayward",
-    "Address": {
-      "street": "321 Lemon Street",
-      "city": "New York",
-      "state": "NY",
-      "zip": "10012",
-      "country": "USA"
+    {
+      "code": "zdvker6u",
+      "lastName": "Hayward",
+      "firstName": "Terry",
+      "address": {
+        "street": "321 Lemon Street",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10012",
+        "country": "USA"
+      },
+      "emails": []
     },
-    "emails": [
-      ""
-    ]
-  },
-  {
-    "code": "SKVUZH",
-    "firstName": " Isadora",
-    "lastName": "Hicks",
-    "Address": {
-      "street": "142 Drive",
-      "city": " Shanghai",
-      "state": "",
-      "zip": "200012",
-      "country": "China"
+    {
+      "code": "SKVUZH",
+      "lastName": "Hicks",
+      "firstName": "Isadora",
+      "address": {
+        "street": "142 Drive",
+        "city": "Shanghai",
+        "state": "",
+        "zip": "200012",
+        "country": "China"
+      },
+      "emails": [
+        "ihicks@shu.edu.cn"
+      ]
     },
-    "emails": [
-      "ihicks@shu.edu.cn"
-    ]
-  },
-  {
-    "code": "123a",
-    "firstName": " Petra",
-    "lastName": "Battle",
-    "Address": {
-      "street": "1 Blue Jays Way",
-      "city": " Toronto",
-      "state": " ON",
-      "zip": " M5V 1J1",
-      "country": " Canada"
+    {
+      "code": "123a",
+      "lastName": "Battle",
+      "firstName": "Petra",
+      "address": {
+        "street": "1 Blue Jays Way",
+        "city": "Toronto",
+        "state": "ON",
+        "zip": "M5V 1J1",
+        "country": "Canada"
+      },
+      "emails": [
+        "danextpm@canada.gov"
+      ]
     },
-    "emails": [
-      "danextpm@canada.gov"
-    ]
-  },
-  {
-    "code": "354fgb",
-    "firstName": " Darci",
-    "lastName": "Burns",
-    "Address": {
-      "street": "1017 BlueJay Way",
-      "city": " London",
-      "state": " DA",
-      "zip": " 070708",
-      "country": " England"
-    },
-    "emails": []
-  }
-]}
+    {
+      "code": "354fgb",
+      "lastName": "Burns",
+      "firstName": "Darci",
+      "address": {
+        "street": "1017 BlueJay Way",
+        "city": "London",
+        "state": "DA",
+        "zip": "070708",
+        "country": "England"
+      },
+      "emails": []
+    }
+  ]
+}
