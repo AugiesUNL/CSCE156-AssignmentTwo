@@ -1,6 +1,8 @@
 package edu.unl.csce.assignments.two.managers;
 
+import edu.unl.csce.assignments.two.io.handlers.dat.CustomerDatHandler;
 import edu.unl.csce.assignments.two.io.handlers.dat.PersonDatHandler;
+import edu.unl.csce.assignments.two.io.handlers.json.CustomerJsonHandler;
 import edu.unl.csce.assignments.two.io.handlers.json.PersonJsonHandler;
 import edu.unl.csce.assignments.two.io.handlers.xml.PersonXmlHandler;
 
@@ -11,6 +13,14 @@ public class IoManager {
     private final PersonDatHandler personDatHandler = new PersonDatHandler();
     private final PersonJsonHandler personJsonHandler = new PersonJsonHandler();
     private final PersonXmlHandler personXmlHandler = new PersonXmlHandler();
+    
+    private final CustomerDatHandler customerDatHandler = new CustomerDatHandler();
+    private final CustomerJsonHandler customerJsonHandler = new CustomerJsonHandler();
+   // private final CustomerXmlHandler customerXmlHandler = new PersonXmlHandler();
+//    
+//    private final PersonDatHandler personDatHandler = new PersonDatHandler();
+//    private final PersonJsonHandler personJsonHandler = new PersonJsonHandler();
+//    private final PersonXmlHandler personXmlHandler = new PersonXmlHandler();
 
     public PersonDatHandler getPersonDatHandler(){
         return this.personDatHandler;
@@ -27,6 +37,15 @@ public class IoManager {
     public String getContentsAsString(File file){
         return getContentsAsString(file,false);
     }
+    
+    public CustomerDatHandler getCustomerDatHandler() {
+    	return this.customerDatHandler;
+    }
+    
+    public CustomerJsonHandler getCustomerJsonHandler() {
+    	return this.customerJsonHandler;
+    }
+
 
     public String getContentsAsString(File file, boolean hasFirstLine){
         StringBuilder sb = new StringBuilder();

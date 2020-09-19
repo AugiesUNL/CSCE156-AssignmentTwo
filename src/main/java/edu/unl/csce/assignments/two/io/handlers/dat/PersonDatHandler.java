@@ -55,7 +55,7 @@ public class PersonDatHandler {
 
     public List<Person> getPeopleFromDat(){
         System.out.println("Converting Persons.dat...");
-        ArrayList<Person> people = new ArrayList<>();
+        List<Person> people = new ArrayList<>();
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(PERSONS_DAT_FILE));
             int linesToRead = Integer.parseInt(bufferedReader.readLine());
@@ -67,5 +67,19 @@ public class PersonDatHandler {
         }
         System.out.println("Converted!");
         return people;
+    }
+    
+    public Person getPerson(String code)
+    {
+    	List<Person> list = new ArrayList<>();
+    	list = getPeopleFromDat();
+    	for(Person x : list)
+    	{
+    		if (x.getCode() == code)
+    		{
+    			return x;
+    		}
+    	}
+    	return null;
     }
 }
