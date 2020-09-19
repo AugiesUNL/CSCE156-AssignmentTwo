@@ -3,6 +3,9 @@ package com.bc.data;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * POJO representing an Address for easier object initialization
+ */
 public class Address {
     private final String street;
     private final String city;

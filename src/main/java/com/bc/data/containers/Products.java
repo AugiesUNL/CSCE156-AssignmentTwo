@@ -4,6 +4,9 @@ import com.bc.data.Product;
 
 import java.util.List;
 
+/**
+ * Class to contain a list of {@link Product} to make parsing easier
+ */
 public class Products {
     private final List<Product> products;
 

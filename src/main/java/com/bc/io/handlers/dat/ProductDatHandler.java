@@ -15,6 +15,12 @@ import java.util.List;
 public class ProductDatHandler {
     private static final File PRODUCTS_DAT_FILE = new File("./data/Products.dat");
 
+    /**
+     * Deserializes a product
+     *
+     * @param productString the String to deserialize
+     * @return the product object
+     */
     public Product deserialize(String productString) {
         List<String> productData = Arrays.asList(productString.split(";"));
 
@@ -62,6 +68,10 @@ public class ProductDatHandler {
         return product;
     }
 
+    /**
+     * Gets all the Products from the Dat file
+     * @return the list of the Dat file's products
+     */
     public List<Product> getProductsFromDat() {
         System.out.println("Converting Products.dat...");
         List<Product> products = new ArrayList<>();

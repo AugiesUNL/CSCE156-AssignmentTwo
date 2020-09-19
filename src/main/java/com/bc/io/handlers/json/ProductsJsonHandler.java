@@ -16,10 +16,13 @@ public class ProductsJsonHandler {
 
     private final Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create(); //defaults should be fine
 
+    /**
+     * Saves the products to a json file
+     */
     public void saveProductsToJson() {
         System.out.println("Saving to Products.json...");
         List<Product> products = DataConverter.getIoManager().getProductDatHandler().getProductsFromDat();
-        try {
+        try { //writing to file
             FileWriter fileWriter = new FileWriter(PRODUCTS_JSON_FILE);
             gson.toJson(new Products(products), fileWriter);
             fileWriter.close();

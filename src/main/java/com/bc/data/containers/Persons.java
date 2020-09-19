@@ -1,12 +1,12 @@
 package com.bc.data.containers;
 
+import com.bc.data.Customer;
 import com.bc.data.Person;
 
 import java.util.List;
 
 /**
- * A container class made to avoid the pain of a JsonObject with nothing in it but a JsonArray
- * Makes parsing the Persons.json to a {@link java.util.Collection} easier.
+ * Class to contain a list of {@link Person} to make parsing easier
  */
 public class Persons {
     private final List<Person> persons;

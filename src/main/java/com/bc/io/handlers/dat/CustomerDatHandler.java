@@ -19,7 +19,6 @@ public class CustomerDatHandler {
      *
      * @param customerString the String to deserialize
      * @return the customer object
-     * customerCode;customerType;customerName;primaryContactCode;address
      */
     public Customer deserialize(String customerString, List<Person> people) {
         List<String> customerData = Arrays.asList(customerString.split(";"));
@@ -33,6 +32,12 @@ public class CustomerDatHandler {
         );
     }
 
+    /**
+     * Returns a person with the given code
+     * @param people the list of people to check
+     * @param code the code to check for
+     * @return the Person containing the code
+     */
     private Person getPersonWithCode(List<Person> people, String code) {
         for (Person person : people) {
             if (person.getCode().equals(code)) {
@@ -42,6 +47,10 @@ public class CustomerDatHandler {
         return null;
     }
 
+    /**
+     * Gets all the Customers from the Dat file
+     * @return the list of the Dat file's customers
+     */
     public List<Customer> getCustomersFromDat() {
         System.out.println("Converting Customers.dat...");
         ArrayList<Customer> customers = new ArrayList<>();

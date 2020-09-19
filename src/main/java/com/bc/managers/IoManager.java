@@ -12,7 +12,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-
+/**
+ * A manager of all Input/Output operations
+ */
 public class IoManager {
     private final PersonDatHandler personDatHandler = new PersonDatHandler();
     private final PersonJsonHandler personJsonHandler = new PersonJsonHandler();
@@ -51,6 +53,12 @@ public class IoManager {
         return getContentsAsString(file, false);
     }
 
+    /**
+     * Gets the contents of a file as a String
+     * @param file the file whose contents needs retrieved
+     * @param hasFirstLine whether or not to skip the first line
+     * @return a string with the file's contents
+     */
     public String getContentsAsString(File file, boolean hasFirstLine) {
         StringBuilder sb = new StringBuilder();
         try {

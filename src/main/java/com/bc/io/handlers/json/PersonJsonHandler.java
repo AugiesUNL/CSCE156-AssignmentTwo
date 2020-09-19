@@ -16,10 +16,13 @@ public class PersonJsonHandler {
 
     private final Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create(); //defaults should be fine
 
+    /**
+     * Saves the peope to a json file
+     */
     public void savePeopleToJson() {
         System.out.println("Saving to Persons.json...");
         List<Person> people = DataConverter.getIoManager().getPersonDatHandler().getPeopleFromDat();
-        try {
+        try { //writing to file
             FileWriter fileWriter = new FileWriter(PERSONS_JSON_FILE);
             gson.toJson(new Persons(people), fileWriter);
             fileWriter.close();

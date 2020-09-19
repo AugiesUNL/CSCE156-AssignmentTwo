@@ -17,10 +17,13 @@ public class CustomerJsonHandler {
 
     private final Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create(); //defaults should be fine
 
+    /**
+     * Saves the customers to a json file
+     */
     public void saveCustomersToJson() {
         System.out.println("Saving to Customers.json...");
         List<Customer> customers = DataConverter.getIoManager().getCustomerDatHandler().getCustomersFromDat();
-        try {
+        try { //writing to file
             FileWriter fileWriter = new FileWriter(CUSTOMERS_JSON_FILE);
             gson.toJson(new Customers(customers), fileWriter);
             fileWriter.close();

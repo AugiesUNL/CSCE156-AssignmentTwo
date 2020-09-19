@@ -7,8 +7,8 @@ public class DataConverter {
 
     public static void main(String[] args) {
         ioManager = new IoManager();
-//        ioManager.getPersonJsonHandler().savePeopleToJson();
-//        ioManager.getCustomerJsonHandler().saveCustomersToJson();
+        ioManager.getPersonJsonHandler().savePeopleToJson();
+        ioManager.getCustomerJsonHandler().saveCustomersToJson();
         ioManager.getProductJsonHandler().saveProductsToJson();
     }
 

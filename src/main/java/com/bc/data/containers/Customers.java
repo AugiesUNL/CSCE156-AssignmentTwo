@@ -4,6 +4,9 @@ import com.bc.data.Customer;
 
 import java.util.List;
 
+/**
+ * Class to contain a list of {@link Customer} to make parsing easier
+ */
 public class Customers {
     private final List<Customer> customers;
 

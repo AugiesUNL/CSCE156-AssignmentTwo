@@ -56,6 +56,10 @@ public class PersonDatHandler {
         return sb.toString();
     }
 
+    /**
+     * Gets all the People from the Dat file
+     * @return the list of the Dat file's people
+     */
     public List<Person> getPeopleFromDat() {
         System.out.println("Converting Persons.dat...");
         List<Person> people = new ArrayList<>();
