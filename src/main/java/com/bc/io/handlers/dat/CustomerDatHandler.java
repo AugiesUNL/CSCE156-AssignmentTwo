@@ -5,9 +5,7 @@ import com.bc.data.Address;
 import com.bc.data.Customer;
 import com.bc.data.Person;
 import com.bc.io.utils.Utils;
-import com.bc.managers.IoManager;
 
-import javax.xml.crypto.Data;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,9 +33,9 @@ public class CustomerDatHandler {
         );
     }
 
-    private Person getPersonWithCode(List<Person> people, String code){
-        for(Person person : people){
-            if(person.getCode().equals(code)){
+    private Person getPersonWithCode(List<Person> people, String code) {
+        for (Person person : people) {
+            if (person.getCode().equals(code)) {
                 return person;
             }
         }

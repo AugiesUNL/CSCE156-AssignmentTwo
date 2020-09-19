@@ -35,6 +35,4 @@ public class Customer {
     public char getType() {
         return type;
     }
-
-
 }

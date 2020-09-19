@@ -19,7 +19,7 @@ public class IoManager {
 
     private final CustomerDatHandler customerDatHandler = new CustomerDatHandler();
     private final CustomerJsonHandler customerJsonHandler = new CustomerJsonHandler();
-//    
+
     private final ProductDatHandler productDatHandler = new ProductDatHandler();
     private final ProductsJsonHandler productsJsonHandler = new ProductsJsonHandler();
 
