@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "dailyCost": 5.28,
+      "deposit": 2009.0,
+      "cleaningFee": 2534.2,
+      "code": "poiuyt",
+      "type": "R",
+      "label": "2003 Honda Civic"
+    },
+    {
+      "partsCost": 8501.0,
+      "hourlyLaborCost": 531.0,
+      "code": "guit4r",
+      "type": "F",
+      "label": "Guitar Car"
+    },
+    {
+      "unitCost": 99999.99,
+      "code": "k4ch0w",
+      "type": "C",
+      "label": "Lightning McQueen"
+    },
+    {
+      "partsCost": 924.0,
+      "hourlyLaborCost": 21.0,
+      "code": "h1m",
+      "type": "F",
+      "label": "The Dude"
+    },
+    {
+      "unitCost": 81.23,
+      "code": "c00k13",
+      "type": "C",
+      "label": "Food for the hungry"
+    },
+    {
+      "costPerMile": 129.21,
+      "code": "bruh",
+      "type": "T",
+      "label": "Do something I guess"
+    },
+    {
+      "dailyCost": 12494.42,
+      "deposit": 5312.0,
+      "cleaningFee": 320.0,
+      "code": "yippee",
+      "type": "R",
+      "label": "unreleased product"
+    }
+  ]
+}

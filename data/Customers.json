@@ -1,0 +1,171 @@
+{
+  "customers": [
+    {
+      "code": "lenthil",
+      "name": "UNL",
+      "contact": {
+        "code": "dec3",
+        "lastName": "Shelly",
+        "firstName": "Willfred",
+        "address": {
+          "street": "1010 s street",
+          "city": "Omaha",
+          "state": "NE",
+          "zip": "65432",
+          "country": "USA"
+        },
+        "emails": [
+          "shellwill@gmail.com",
+          "shellfred@yahoo.com"
+        ]
+      },
+      "address": {
+        "street": "1234 UNL Street",
+        "city": "Lincoln",
+        "state": "NE",
+        "zip": "68144",
+        "country": "USA"
+      },
+      "type": "B"
+    },
+    {
+      "code": "caffeine",
+      "name": "SuperCool Company",
+      "contact": {
+        "code": "oct5",
+        "lastName": "Man",
+        "firstName": "Child",
+        "address": {
+          "street": "1234 n 64 street",
+          "city": "Omaha",
+          "state": "NE",
+          "zip": "68124",
+          "country": "USA"
+        },
+        "emails": [
+          "manchild@gmail.com",
+          "manchild@hotmail.com"
+        ]
+      },
+      "address": {
+        "street": "2132 Washington Ave",
+        "city": "City",
+        "state": "State",
+        "zip": "12345",
+        "country": "Country"
+      },
+      "type": "P"
+    },
+    {
+      "code": "mnopoly",
+      "name": "Amazon Inc",
+      "contact": {
+        "code": "epich",
+        "lastName": "Shald",
+        "firstName": "Augustus",
+        "address": {
+          "street": "1234 Fakeaddress St",
+          "city": "Omaha",
+          "state": "NE",
+          "zip": "68821",
+          "country": "USA"
+        },
+        "emails": [
+          "shald.augie@gmail.com",
+          "augiesprojects@gmail.com",
+          "ashald2@huskers.unl.edu"
+        ]
+      },
+      "address": {
+        "street": "2 Trillion St",
+        "city": "Amazonopia",
+        "state": "AZ",
+        "zip": "11111",
+        "country": "USA"
+      },
+      "type": "B"
+    },
+    {
+      "code": "cardboard",
+      "name": "cardboard man",
+      "contact": {
+        "code": "kdflas",
+        "lastName": "Big",
+        "firstName": "Dude",
+        "address": {
+          "street": "2149 Oakview street",
+          "city": "Omaha",
+          "state": "NE",
+          "zip": "58104",
+          "country": "USA"
+        },
+        "emails": []
+      },
+      "address": {
+        "street": "1234 washington ave",
+        "city": "seattle",
+        "state": "WA",
+        "zip": "12341",
+        "country": "USA"
+      },
+      "type": "P"
+    },
+    {
+      "code": "14021asd",
+      "name": "Warren Buffet",
+      "contact": {
+        "code": "oct5",
+        "lastName": "Man",
+        "firstName": "Child",
+        "address": {
+          "street": "1234 n 64 street",
+          "city": "Omaha",
+          "state": "NE",
+          "zip": "68124",
+          "country": "USA"
+        },
+        "emails": [
+          "manchild@gmail.com",
+          "manchild@hotmail.com"
+        ]
+      },
+      "address": {
+        "street": "12345 Rich St",
+        "city": "Omaha",
+        "state": "Ne",
+        "zip": "68104",
+        "country": "USA"
+      },
+      "type": "P"
+    },
+    {
+      "code": "vryloud",
+      "name": "Luke Davidston",
+      "contact": {
+        "code": "epich",
+        "lastName": "Shald",
+        "firstName": "Augustus",
+        "address": {
+          "street": "1234 Fakeaddress St",
+          "city": "Omaha",
+          "state": "NE",
+          "zip": "68821",
+          "country": "USA"
+        },
+        "emails": [
+          "shald.augie@gmail.com",
+          "augiesprojects@gmail.com",
+          "ashald2@huskers.unl.edu"
+        ]
+      },
+      "address": {
+        "street": "8420 Sandoz St",
+        "city": "Lincoln",
+        "state": "Ne",
+        "zip": "68888",
+        "country": "USA"
+      },
+      "type": "P"
+    }
+  ]
+}
