@@ -1,5 +1,6 @@
 package com.bc.data;
 
+import com.bc.data.containers.InvoiceProductContainer;
 import com.bc.data.products.Product;
 
 import java.util.List;
@@ -9,9 +10,9 @@ public class Invoice {
     private final String code;
     private final Person owner;
     private final Customer customer;
-    private final Map<Product,InvoiceProductData> products;
+    private final List<InvoiceProductContainer> products;
 
-    public Invoice(String code, Person owner, Customer customer, Map<Product,InvoiceProductData> products) {
+    public Invoice(String code, Person owner, Customer customer, List<InvoiceProductContainer> products) {
         this.code = code;
         this.owner = owner;
         this.customer = customer;
@@ -30,7 +31,7 @@ public class Invoice {
         return customer;
     }
 
-    public Map<Product,InvoiceProductData> getProducts() {
+    public List<InvoiceProductContainer> getProducts() {
         return products;
     }
 }

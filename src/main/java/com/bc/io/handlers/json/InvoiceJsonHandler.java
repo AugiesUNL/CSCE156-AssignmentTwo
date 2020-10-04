@@ -14,7 +14,7 @@ import java.util.List;
 public class InvoiceJsonHandler {
     private static final File INVOICES_JSON_FILE = new File("./data/Invoices.json");
 
-    private final Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create(); //defaults should be fine
+    private final Gson gson = new GsonBuilder().setPrettyPrinting().create(); //defaults should be fine
 
     /**
      * Saves the invoices to a json file

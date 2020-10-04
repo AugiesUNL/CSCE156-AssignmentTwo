@@ -5,6 +5,7 @@ import com.bc.data.Customer;
 import com.bc.data.Invoice;
 import com.bc.data.InvoiceProductData;
 import com.bc.data.Person;
+import com.bc.data.containers.InvoiceProductContainer;
 import com.bc.data.products.*;
 import com.bc.io.utils.Utils;
 import com.bc.managers.IoManager;
@@ -25,14 +26,14 @@ public class InvoiceDatHandler {
 
         Person owner = Utils.getPersonWithCode(allPeople,ownerCode);
         Customer customer = Utils.getCustomerWithCode(allCustomers,customerCode);
-        Map<Product,InvoiceProductData> invoiceProducts = deserializeProductData(productListString, allProducts);
+        List<InvoiceProductContainer> invoiceProducts = deserializeProductData(productListString, allProducts);
 
         return new Invoice(invoiceCode,owner,customer,invoiceProducts);
     }
 
-    private Map<Product, InvoiceProductData> deserializeProductData(String productListString, List<Product> allProducts){
+    private List<InvoiceProductContainer> deserializeProductData(String productListString, List<Product> allProducts){
         String[] productStringEntries = productListString.split(",");
-        Map<Product,InvoiceProductData> products = new HashMap<>();
+        List<InvoiceProductContainer> products = new ArrayList<>();
 
         for(String productStringEntry : productStringEntries){
             List<String> productEntryData = Arrays.asList(productStringEntry.split(":"));
@@ -54,7 +55,7 @@ public class InvoiceDatHandler {
             }else{
                 System.err.println("Error parsing productStringEntry: " + productStringEntry);
             }
-            products.put(product,invoiceProductData);
+            products.add(new InvoiceProductContainer(product,invoiceProductData));
         }
         return products;
     }
