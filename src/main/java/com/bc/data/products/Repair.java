@@ -1,7 +1,5 @@
 package com.bc.data.products;
 
-import com.bc.data.Product;
-
 public class Repair extends Product {
     private final double partsCost;
     private final double hourlyLaborCost;

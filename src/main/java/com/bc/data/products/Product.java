@@ -1,4 +1,4 @@
-package com.bc.data;
+package com.bc.data.products;
 
 public abstract class Product {
     private final String code;

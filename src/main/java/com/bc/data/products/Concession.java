@@ -1,7 +1,5 @@
 package com.bc.data.products;
 
-import com.bc.data.Product;
-
 public class Concession extends Product {
     private final double unitCost;
 

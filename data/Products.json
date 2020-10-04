@@ -1,52 +1,58 @@
 {
   "products": [
     {
-      "dailyCost": 5.28,
-      "deposit": 2009.0,
-      "cleaningFee": 2534.2,
-      "code": "poiuyt",
+      "dailyCost": 50.75,
+      "deposit": 200.0,
+      "cleaningFee": 25.39,
+      "code": "qwertyuiop",
       "type": "R",
-      "label": "2003 Honda Civic"
+      "label": "2007 Ford Crown Victoria"
     },
     {
-      "partsCost": 8501.0,
-      "hourlyLaborCost": 531.0,
-      "code": "guit4r",
+      "partsCost": 100.0,
+      "hourlyLaborCost": 75.0,
+      "code": "b4z1ng4",
       "type": "F",
-      "label": "Guitar Car"
+      "label": "Bumper Replacement"
     },
     {
-      "unitCost": 99999.99,
-      "code": "k4ch0w",
+      "unitCost": 4.75,
+      "code": "k04l4",
       "type": "C",
-      "label": "Lightning McQueen"
+      "label": "12-oz Coffee"
     },
     {
-      "partsCost": 924.0,
-      "hourlyLaborCost": 21.0,
-      "code": "h1m",
-      "type": "F",
-      "label": "The Dude"
-    },
-    {
-      "unitCost": 81.23,
-      "code": "c00k13",
-      "type": "C",
-      "label": "Food for the hungry"
-    },
-    {
-      "costPerMile": 129.21,
-      "code": "bruh",
+      "costPerMile": 6.0,
+      "code": "sievub",
       "type": "T",
-      "label": "Do something I guess"
+      "label": "Tow \u003c 10 Miles"
     },
     {
-      "dailyCost": 12494.42,
-      "deposit": 5312.0,
-      "cleaningFee": 320.0,
-      "code": "yippee",
+      "dailyCost": 1000.0,
+      "deposit": 5000.0,
+      "cleaningFee": 50.0,
+      "code": "yuasi",
       "type": "R",
-      "label": "unreleased product"
+      "label": "Tesla Cybertruck"
+    },
+    {
+      "partsCost": 800.0,
+      "hourlyLaborCost": 25.0,
+      "code": "t0m03",
+      "type": "F",
+      "label": "Full Wheel Replacement"
+    },
+    {
+      "unitCost": 10.0,
+      "code": "kvnjgbf5",
+      "type": "C",
+      "label": "Large \"Homemade\" Raisin Cookie"
+    },
+    {
+      "costPerMile": 4.0,
+      "code": "ugis43",
+      "type": "T",
+      "label": "Tow \u003e 10 miles"
     }
   ]
 }

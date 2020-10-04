@@ -1,7 +1,7 @@
 package com.bc.io.handlers.json;
 
 import com.bc.DataConverter;
-import com.bc.data.Product;
+import com.bc.data.products.Product;
 import com.bc.data.containers.Products;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -1,6 +1,5 @@
 package com.bc.data.containers;
 
-import com.bc.data.Customer;
 import com.bc.data.Person;
 
 import java.util.List;

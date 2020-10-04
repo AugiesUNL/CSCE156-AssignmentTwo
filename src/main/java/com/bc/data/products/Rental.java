@@ -1,7 +1,5 @@
 package com.bc.data.products;
 
-import com.bc.data.Product;
-
 public class Rental extends Product {
     private final double dailyCost;
     private final double deposit;

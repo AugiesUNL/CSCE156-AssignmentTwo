@@ -1,7 +1,7 @@
 package com.bc.io.handlers.dat;
 
 import com.bc.DataConverter;
-import com.bc.data.Product;
+import com.bc.data.products.Product;
 import com.bc.data.products.Concession;
 import com.bc.data.products.Rental;
 import com.bc.data.products.Repair;

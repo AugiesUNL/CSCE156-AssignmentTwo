@@ -27,24 +27,9 @@ public class CustomerDatHandler {
                 customerData.get(0),
                 customerData.get(1).charAt(0),
                 customerData.get(2),
-                getPersonWithCode(people, customerData.get(3)),
+                Utils.getPersonWithCode(people, customerData.get(3)),
                 Address.fromString(customerData.get(4))
         );
-    }
-
-    /**
-     * Returns a person with the given code
-     * @param people the list of people to check
-     * @param code the code to check for
-     * @return the Person containing the code
-     */
-    private Person getPersonWithCode(List<Person> people, String code) {
-        for (Person person : people) {
-            if (person.getCode().equals(code)) {
-                return person;
-            }
-        }
-        return null;
     }
 
     /**

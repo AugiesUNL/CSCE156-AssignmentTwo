@@ -1,168 +1,163 @@
 {
   "customers": [
     {
-      "code": "lenthil",
-      "name": "UNL",
+      "code": "lsvntk",
+      "name": "State of Nebraska",
       "contact": {
-        "code": "dec3",
-        "lastName": "Shelly",
-        "firstName": "Willfred",
+        "code": "123a",
+        "lastName": "Battle",
+        "firstName": "Petra",
         "address": {
-          "street": "1010 s street",
-          "city": "Omaha",
-          "state": "NE",
-          "zip": "65432",
-          "country": "USA"
+          "street": "1 Blue Jays Way",
+          "city": "Toronto",
+          "state": "ON",
+          "zip": "M5V 1J1",
+          "country": "Canada"
         },
         "emails": [
-          "shellwill@gmail.com",
-          "shellfred@yahoo.com"
+          "danextpm@canada.gov"
         ]
       },
       "address": {
-        "street": "1234 UNL Street",
-        "city": "Lincoln",
-        "state": "NE",
-        "zip": "68144",
+        "street": "100 W Fake Street",
+        "city": "Albaquerque",
+        "state": "NM",
+        "zip": "80706",
         "country": "USA"
       },
       "type": "B"
     },
     {
-      "code": "caffeine",
-      "name": "SuperCool Company",
+      "code": "dvkh",
+      "name": "Wacky Wally\u0027s Used Cars",
       "contact": {
-        "code": "oct5",
-        "lastName": "Man",
-        "firstName": "Child",
+        "code": "zyx321",
+        "lastName": "Dolan",
+        "firstName": "Ayaana",
         "address": {
-          "street": "1234 n 64 street",
-          "city": "Omaha",
-          "state": "NE",
-          "zip": "68124",
-          "country": "USA"
-        },
-        "emails": [
-          "manchild@gmail.com",
-          "manchild@hotmail.com"
-        ]
-      },
-      "address": {
-        "street": "2132 Washington Ave",
-        "city": "City",
-        "state": "State",
-        "zip": "12345",
-        "country": "Country"
-      },
-      "type": "P"
-    },
-    {
-      "code": "mnopoly",
-      "name": "Amazon Inc",
-      "contact": {
-        "code": "epich",
-        "lastName": "Shald",
-        "firstName": "Augustus",
-        "address": {
-          "street": "1234 Fakeaddress St",
-          "city": "Omaha",
-          "state": "NE",
-          "zip": "68821",
-          "country": "USA"
-        },
-        "emails": [
-          "shald.augie@gmail.com",
-          "augiesprojects@gmail.com",
-          "ashald2@huskers.unl.edu"
-        ]
-      },
-      "address": {
-        "street": "2 Trillion St",
-        "city": "Amazonopia",
-        "state": "AZ",
-        "zip": "11111",
-        "country": "USA"
-      },
-      "type": "B"
-    },
-    {
-      "code": "cardboard",
-      "name": "cardboard man",
-      "contact": {
-        "code": "kdflas",
-        "lastName": "Big",
-        "firstName": "Dude",
-        "address": {
-          "street": "2149 Oakview street",
-          "city": "Omaha",
-          "state": "NE",
-          "zip": "58104",
-          "country": "USA"
+          "street": "23450 Cabo San Lucas",
+          "city": "Los Cabos",
+          "state": "BCS",
+          "zip": "",
+          "country": "Mexico"
         },
         "emails": []
       },
       "address": {
-        "street": "1234 washington ave",
-        "city": "seattle",
-        "state": "WA",
-        "zip": "12341",
+        "street": "123 Madison Avenue",
+        "city": "Bodega",
+        "state": "NL",
+        "zip": "",
+        "country": "CUBA"
+      },
+      "type": "P"
+    },
+    {
+      "code": "l0000000000ngc0d3",
+      "name": "Demolition Derby",
+      "contact": {
+        "code": "lejnr4",
+        "lastName": "Spooner",
+        "firstName": "Kenan",
+        "address": {
+          "street": "123 N 1st Street",
+          "city": "Compton",
+          "state": "CA",
+          "zip": "90210",
+          "country": "USA"
+        },
+        "emails": [
+          "kspoons@emailservice.domain",
+          "thespoonman@soundgarden.com"
+        ]
+      },
+      "address": {
+        "street": "126-01 Roosevelt Ave",
+        "city": "Flushing",
+        "state": "NY",
+        "zip": "11368",
+        "country": "USA"
+      },
+      "type": "B"
+    },
+    {
+      "code": "asdf419",
+      "name": "Fenton Industries",
+      "contact": {
+        "code": "biz45",
+        "lastName": "Hart",
+        "firstName": "Fenton",
+        "address": {
+          "street": "1 Wall Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": "10005-0012",
+          "country": "USA"
+        },
+        "emails": [
+          "fentony@windstream.net"
+        ]
+      },
+      "address": {
+        "street": "1060 West Addison Street",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60613",
         "country": "USA"
       },
       "type": "P"
     },
     {
-      "code": "14021asd",
-      "name": "Warren Buffet",
+      "code": "421asdf",
+      "name": "Foundation for the Arts",
       "contact": {
-        "code": "oct5",
-        "lastName": "Man",
-        "firstName": "Child",
+        "code": "biz45",
+        "lastName": "Hart",
+        "firstName": "Fenton",
         "address": {
-          "street": "1234 n 64 street",
-          "city": "Omaha",
-          "state": "NE",
-          "zip": "68124",
+          "street": "1 Wall Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": "10005-0012",
           "country": "USA"
         },
         "emails": [
-          "manchild@gmail.com",
-          "manchild@hotmail.com"
+          "fentony@windstream.net"
         ]
       },
       "address": {
-        "street": "12345 Rich St",
-        "city": "Omaha",
-        "state": "Ne",
-        "zip": "68104",
+        "street": "1 MetLife Stadium Dr",
+        "city": "East Rutherford",
+        "state": "NJ",
+        "zip": "07073",
         "country": "USA"
       },
-      "type": "P"
+      "type": "B"
     },
     {
-      "code": "vryloud",
-      "name": "Luke Davidston",
+      "code": "avnkbkjds",
+      "name": "Juno Stephenson",
       "contact": {
-        "code": "epich",
-        "lastName": "Shald",
-        "firstName": "Augustus",
+        "code": "lejnr4",
+        "lastName": "Spooner",
+        "firstName": "Kenan",
         "address": {
-          "street": "1234 Fakeaddress St",
-          "city": "Omaha",
-          "state": "NE",
-          "zip": "68821",
+          "street": "123 N 1st Street",
+          "city": "Compton",
+          "state": "CA",
+          "zip": "90210",
           "country": "USA"
         },
         "emails": [
-          "shald.augie@gmail.com",
-          "augiesprojects@gmail.com",
-          "ashald2@huskers.unl.edu"
+          "kspoons@emailservice.domain",
+          "thespoonman@soundgarden.com"
         ]
       },
       "address": {
-        "street": "8420 Sandoz St",
-        "city": "Lincoln",
-        "state": "Ne",
-        "zip": "68888",
+        "street": "123 N 1st Street",
+        "city": "Compton",
+        "state": "CA",
+        "zip": "90210",
         "country": "USA"
       },
       "type": "P"

@@ -1,9 +1,11 @@
 package com.bc.managers;
 
 import com.bc.io.handlers.dat.CustomerDatHandler;
+import com.bc.io.handlers.dat.InvoiceDatHandler;
 import com.bc.io.handlers.dat.PersonDatHandler;
 import com.bc.io.handlers.dat.ProductDatHandler;
 import com.bc.io.handlers.json.CustomerJsonHandler;
+import com.bc.io.handlers.json.InvoiceJsonHandler;
 import com.bc.io.handlers.json.PersonJsonHandler;
 import com.bc.io.handlers.json.ProductsJsonHandler;
 
@@ -25,6 +27,9 @@ public class IoManager {
     private final ProductDatHandler productDatHandler = new ProductDatHandler();
     private final ProductsJsonHandler productsJsonHandler = new ProductsJsonHandler();
 
+    private final InvoiceDatHandler invoiceDatHandler = new InvoiceDatHandler();
+    private final InvoiceJsonHandler invoiceJsonHandler = new InvoiceJsonHandler();
+
     public PersonDatHandler getPersonDatHandler() {
         return this.personDatHandler;
     }
@@ -45,8 +50,16 @@ public class IoManager {
         return productDatHandler;
     }
 
-    public ProductsJsonHandler getProductJsonHandler() {
+    public ProductsJsonHandler getProductsJsonHandler() {
         return productsJsonHandler;
+    }
+
+    public InvoiceDatHandler getInvoiceDatHandler() {
+        return invoiceDatHandler;
+    }
+
+    public InvoiceJsonHandler getInvoiceJsonHandler() {
+        return invoiceJsonHandler;
     }
 
     public String getContentsAsString(File file) {

@@ -9,7 +9,8 @@ public class DataConverter {
         ioManager = new IoManager();
         ioManager.getPersonJsonHandler().savePeopleToJson();
         ioManager.getCustomerJsonHandler().saveCustomersToJson();
-        ioManager.getProductJsonHandler().saveProductsToJson();
+        ioManager.getProductsJsonHandler().saveProductsToJson();
+        ioManager.getInvoiceJsonHandler().saveInvoicesToJson();
     }
 
     public static IoManager getIoManager() {
