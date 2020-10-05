@@ -31,4 +31,11 @@ public class CustomerJsonHandler {
             e.printStackTrace();
         }
     }
+
+    public List<Customer> loadCustomersFromJson(){
+        System.out.println("Loading from Customers.json");
+        Customers customers = gson.fromJson(DataConverter.getIoManager().getContentsAsString(CUSTOMERS_JSON_FILE),Customers.class);
+        System.out.println("Loaded!");
+        return customers.getCustomers();
+    }
 }

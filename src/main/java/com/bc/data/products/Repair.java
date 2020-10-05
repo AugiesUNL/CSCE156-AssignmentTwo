@@ -4,8 +4,8 @@ public class Repair extends Product {
     private final double partsCost;
     private final double hourlyLaborCost;
 
-    public Repair(String code, char type, String label, double partsCost, double hourlyLaborCost) {
-        super(code, type, label);
+    public Repair(String code, String label, double partsCost, double hourlyLaborCost) {
+        super(code, 'F', label);
         this.partsCost = partsCost;
         this.hourlyLaborCost = hourlyLaborCost;
     }

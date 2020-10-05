@@ -28,13 +28,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "code='" + code + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", address=" + address +
-                ", emails=" + emails +
-                '}';
+        return
+                 lastName  + "," +
+                 firstName  /n+
+                         address /n+
+                 emails ;
     }
 
     public String getCode() {
@@ -56,4 +54,6 @@ public class Person {
     public List<String> getEmails() {
         return emails;
     }
+
+    public int getNumOfEmails() {return emails.size();}
 }

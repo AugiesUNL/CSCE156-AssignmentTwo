@@ -35,4 +35,10 @@ public class Customer {
     public char getType() {
         return type;
     }
+
+    @Override
+    public String toString() {
+        return
+                name /n+ address;
+    }
 }

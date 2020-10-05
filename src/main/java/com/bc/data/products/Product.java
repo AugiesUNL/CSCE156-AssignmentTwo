@@ -22,4 +22,13 @@ public abstract class Product {
     public String getLabel() {
         return label;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "code='" + code + '\'' +
+                ", type=" + type +
+                ", label='" + label + '\'' +
+                '}';
+    }
 }

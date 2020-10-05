@@ -6,8 +6,8 @@ public class Rental extends Product {
     private final double cleaningFee;
 
 
-    public Rental(String code, char type, String label, double dailyCost, double deposit, double cleaningFee) {
-        super(code, type, label);
+    public Rental(String code, String label, double dailyCost, double deposit, double cleaningFee) {
+        super(code,'R' , label);
         this.dailyCost = dailyCost;
         this.deposit = deposit;
         this.cleaningFee = cleaningFee;

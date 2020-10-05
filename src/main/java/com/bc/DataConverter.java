@@ -3,10 +3,9 @@ package com.bc;
 import com.bc.managers.IoManager;
 
 public class DataConverter {
-    private static IoManager ioManager;
+    private static final IoManager ioManager = new IoManager();
 
     public static void main(String[] args) {
-        ioManager = new IoManager();
         ioManager.getPersonJsonHandler().savePeopleToJson();
         ioManager.getCustomerJsonHandler().saveCustomersToJson();
         ioManager.getProductsJsonHandler().saveProductsToJson();

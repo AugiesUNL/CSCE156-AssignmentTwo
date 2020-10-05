@@ -29,7 +29,7 @@ public class ProductDatHandler {
             case "r": //rental
                 product = new Rental(
                         productData.get(0),
-                        productData.get(1).charAt(0),
+
                         productData.get(2),
                         Double.parseDouble(productData.get(3)),
                         Double.parseDouble(productData.get(4)),
@@ -39,7 +39,7 @@ public class ProductDatHandler {
             case "f": //repair
                 product = new Repair(
                         productData.get(0),
-                        productData.get(1).charAt(0),
+
                         productData.get(2),
                         Double.parseDouble(productData.get(3)),
                         Double.parseDouble(productData.get(4))
@@ -48,7 +48,6 @@ public class ProductDatHandler {
             case "c": //concession
                 product = new Concession(
                         productData.get(0),
-                        productData.get(1).charAt(0),
                         productData.get(2),
                         Double.parseDouble(productData.get(3))
                 );
@@ -56,7 +55,7 @@ public class ProductDatHandler {
             case "t": //towing
                 product = new Towing(
                         productData.get(0),
-                        productData.get(1).charAt(0),
+
                         productData.get(2),
                         Double.parseDouble(productData.get(3))
                 );
