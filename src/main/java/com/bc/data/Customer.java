@@ -36,9 +36,27 @@ public class Customer {
         return type;
     }
 
+
+    /*
+    Customer:
+	State of Nebraska (Business Account)
+	100 W Fake Street
+	Albaquerque, NM USA 80706
+     */
     @Override
     public String toString() {
-        return
-                name /n+ address;
+        String accountDescription;
+        switch ((getType() + "").toLowerCase()) {
+            case "b":
+                accountDescription = "(Business Account)";
+                break;
+            case "p":
+                accountDescription = "(Personal Account)";
+                break;
+            default:
+                accountDescription = "(Unknown Account)";
+                break;
+        }
+        return String.format("Customer:%n%s %s%n%s", name, accountDescription, address.toString());
     }
 }

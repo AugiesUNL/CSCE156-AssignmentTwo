@@ -40,11 +40,13 @@ public class Address {
 
     /**
      * Converts the Address to a String
+     * 1 Blue Jays Way
+     * Toronto, ON Canada M5V 1J1
      *
      * @return the String representation of the Address
      */
     public String toString() {
-        return street + "," + city + "," + state + "," + zip + "," + country;
+        return street + "\n" + city + ", " + state + " " + country + " " + zip;
     }
 
     public String getStreet() {

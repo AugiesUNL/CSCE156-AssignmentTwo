@@ -10,6 +10,7 @@ public class Utils {
 
     /**
      * Iterate over a list of Strings and perform .trim on all them
+     *
      * @param list the list to be trimmed
      */
     public static void trimContents(List<String> list) {
@@ -20,8 +21,9 @@ public class Utils {
 
     /**
      * Returns a person with the given code
+     *
      * @param people the list of people to check
-     * @param code the code to check for
+     * @param code   the code to check for
      * @return the Person containing the code
      */
     public static Person getPersonWithCode(List<Person> people, String code) {
@@ -35,13 +37,14 @@ public class Utils {
 
     /**
      * Returns a customer with the given code
+     *
      * @param customers the list of customers to check
-     * @param code the code to check for
+     * @param code      the code to check for
      * @return the Customer containing the code
      */
-    public static Customer getCustomerWithCode(List<Customer> customers, String code){
-        for(Customer customer : customers){
-            if(customer.getCode().equals(code)){
+    public static Customer getCustomerWithCode(List<Customer> customers, String code) {
+        for (Customer customer : customers) {
+            if (customer.getCode().equals(code)) {
                 return customer;
             }
         }
@@ -50,26 +53,27 @@ public class Utils {
 
     /**
      * Returns a product with the given code
+     *
      * @param products the list of products to check
-     * @param code the code to check for
+     * @param code     the code to check for
      * @return the Product containing the code
      */
-    public static Product getProductWithCode(List<Product> products, String code){
-        for(Product product : products){
-            if(product.getCode().equals(code)){
+    public static Product getProductWithCode(List<Product> products, String code) {
+        for (Product product : products) {
+            if (product.getCode().equals(code)) {
                 return product;
             }
         }
         return null;
     }
 
-    public static void printInvoiceSummary()
-    {
-        System.out.println("Executive Summary Report:");
-        System.out.println("Code      Owner                         Customer Account               ");
-        System.out.println("Subtotal    Discounts   Fees        Taxes       Total");
-        System.out.println("--------------------------------------------------------------------------");
-        System.out.println("------------------------------------------------------");
-        for(Customer x : )
-    }
+//    public static void printInvoiceSummary()
+//    {
+//        System.out.println("Executive Summary Report:");
+//        System.out.println("Code      Owner                         Customer Account               ");
+//        System.out.println("Subtotal    Discounts   Fees        Taxes       Total");
+//        System.out.println("--------------------------------------------------------------------------");
+//        System.out.println("------------------------------------------------------");
+//        for(Customer x : )
+//    }
 }

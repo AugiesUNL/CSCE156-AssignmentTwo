@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Class to contain a list of {@link Product} to make parsing easier
+ * Allows Gson to parse as Json Objects rather than Json Arrays
  */
 public class Products {
     private final List<Product> products;

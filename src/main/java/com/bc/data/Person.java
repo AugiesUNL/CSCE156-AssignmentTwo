@@ -26,13 +26,17 @@ public class Person {
         this.emails = new ArrayList<>();
     }
 
+
+    /*
+    Owner:
+        Battle, Petra
+        [danextpm@canada.gov]
+        1 Blue Jays Way
+        Toronto, ON Canada M5V 1J1
+     */
     @Override
     public String toString() {
-        return
-                 lastName  + "," +
-                 firstName  /n+
-                         address /n+
-                 emails ;
+        return String.format("Owner:%n%s, %s%n%s%n%s", lastName, firstName, emails.toString(), address);
     }
 
     public String getCode() {
@@ -55,5 +59,7 @@ public class Person {
         return emails;
     }
 
-    public int getNumOfEmails() {return emails.size();}
+    public int getNumOfEmails() {
+        return emails.size();
+    }
 }

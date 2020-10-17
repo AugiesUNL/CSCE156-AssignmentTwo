@@ -6,10 +6,10 @@ public class DataConverter {
     private static final IoManager ioManager = new IoManager();
 
     public static void main(String[] args) {
-        ioManager.getPersonJsonHandler().savePeopleToJson();
-        ioManager.getCustomerJsonHandler().saveCustomersToJson();
-        ioManager.getProductsJsonHandler().saveProductsToJson();
-        ioManager.getInvoiceJsonHandler().saveInvoicesToJson();
+        ioManager.getJsonHandler().savePeopleToJson();
+        ioManager.getJsonHandler().saveCustomersToJson();
+        ioManager.getJsonHandler().saveProductsToJson();
+        ioManager.getJsonHandler().saveInvoicesToJson();
     }
 
     public static IoManager getIoManager() {

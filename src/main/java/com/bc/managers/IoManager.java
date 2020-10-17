@@ -1,13 +1,7 @@
 package com.bc.managers;
 
-import com.bc.io.handlers.dat.CustomerDatHandler;
-import com.bc.io.handlers.dat.InvoiceDatHandler;
-import com.bc.io.handlers.dat.PersonDatHandler;
-import com.bc.io.handlers.dat.ProductDatHandler;
-import com.bc.io.handlers.json.CustomerJsonHandler;
-import com.bc.io.handlers.json.InvoiceJsonHandler;
-import com.bc.io.handlers.json.PersonJsonHandler;
-import com.bc.io.handlers.json.ProductsJsonHandler;
+import com.bc.io.handlers.DatHandler;
+import com.bc.io.handlers.JsonHandler;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,48 +12,16 @@ import java.io.IOException;
  * A manager of all Input/Output operations
  */
 public class IoManager {
-    private final PersonDatHandler personDatHandler = new PersonDatHandler();
-    private final PersonJsonHandler personJsonHandler = new PersonJsonHandler();
+    private final DatHandler datHandler = new DatHandler();
 
-    private final CustomerDatHandler customerDatHandler = new CustomerDatHandler();
-    private final CustomerJsonHandler customerJsonHandler = new CustomerJsonHandler();
+    private final JsonHandler jsonHandler = new JsonHandler();
 
-    private final ProductDatHandler productDatHandler = new ProductDatHandler();
-    private final ProductsJsonHandler productsJsonHandler = new ProductsJsonHandler();
-
-    private final InvoiceDatHandler invoiceDatHandler = new InvoiceDatHandler();
-    private final InvoiceJsonHandler invoiceJsonHandler = new InvoiceJsonHandler();
-
-    public PersonDatHandler getPersonDatHandler() {
-        return this.personDatHandler;
+    public DatHandler getDatHandler() {
+        return this.datHandler;
     }
 
-    public PersonJsonHandler getPersonJsonHandler() {
-        return this.personJsonHandler;
-    }
-
-    public CustomerDatHandler getCustomerDatHandler() {
-        return this.customerDatHandler;
-    }
-
-    public CustomerJsonHandler getCustomerJsonHandler() {
-        return this.customerJsonHandler;
-    }
-
-    public ProductDatHandler getProductDatHandler() {
-        return productDatHandler;
-    }
-
-    public ProductsJsonHandler getProductsJsonHandler() {
-        return productsJsonHandler;
-    }
-
-    public InvoiceDatHandler getInvoiceDatHandler() {
-        return invoiceDatHandler;
-    }
-
-    public InvoiceJsonHandler getInvoiceJsonHandler() {
-        return invoiceJsonHandler;
+    public JsonHandler getJsonHandler() {
+        return this.jsonHandler;
     }
 
     public String getContentsAsString(File file) {
@@ -68,7 +30,8 @@ public class IoManager {
 
     /**
      * Gets the contents of a file as a String
-     * @param file the file whose contents needs retrieved
+     *
+     * @param file         the file whose contents needs retrieved
      * @param hasFirstLine whether or not to skip the first line
      * @return a string with the file's contents
      */
