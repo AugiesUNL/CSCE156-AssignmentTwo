@@ -19,7 +19,9 @@ import java.util.List;
 
 public class JsonHandler {
     private static final File CUSTOMERS_JSON_FILE = new File("./data/Customers.json");
-
+    private static final File INVOICES_JSON_FILE = new File("./data/Invoices.json");
+    private static final File PERSONS_JSON_FILE = new File("./data/Persons.json");
+    private static final File PRODUCTS_JSON_FILE = new File("./data/Products.json");
     private final Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create(); //defaults should be fine
 
     /**
@@ -44,8 +46,6 @@ public class JsonHandler {
         return customers.getCustomers();
     }
 
-    private static final File INVOICES_JSON_FILE = new File("./data/Invoices.json");
-
     /**
      * Saves the invoices to a json file
      */
@@ -68,8 +68,6 @@ public class JsonHandler {
         return invoices.getInvoices();
     }
 
-    private static final File PERSONS_JSON_FILE = new File("./data/Persons.json");
-
     /**
      * Saves the peope to a json file
      */
@@ -91,8 +89,6 @@ public class JsonHandler {
         System.out.println("Loaded!");
         return persons.getPersons();
     }
-
-    private static final File PRODUCTS_JSON_FILE = new File("./data/Products.json");
 
     /**
      * Saves the products to a json file

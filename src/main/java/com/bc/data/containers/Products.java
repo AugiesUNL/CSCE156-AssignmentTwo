@@ -9,9 +9,13 @@ import java.util.List;
  * Allows Gson to parse as Json Objects rather than Json Arrays
  */
 public class Products {
-    private final List<Product> products;
+    private List<Product> products;
 
     public Products(List<Product> products) {
+        this.products = products;
+    }
+
+    public void setProducts(List<Product> products){
         this.products = products;
     }
 

@@ -66,14 +66,4 @@ public class Utils {
         }
         return null;
     }
-
-//    public static void printInvoiceSummary()
-//    {
-//        System.out.println("Executive Summary Report:");
-//        System.out.println("Code      Owner                         Customer Account               ");
-//        System.out.println("Subtotal    Discounts   Fees        Taxes       Total");
-//        System.out.println("--------------------------------------------------------------------------");
-//        System.out.println("------------------------------------------------------");
-//        for(Customer x : )
-//    }
 }

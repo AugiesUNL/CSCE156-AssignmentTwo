@@ -6,14 +6,6 @@ public class Repair extends Product {
     private double partsCost;
     private double hourlyLaborCost;
 
-    /**
-     * This is purposefully empty.
-     * Without this, gson cannot instantiate without creating a {@link com.google.gson.InstanceCreator}
-     */
-    public Repair(){
-        super();
-    }
-
     public Repair(String code, String label, double partsCost, double hourlyLaborCost) {
         super(code, 'F', label);
         this.partsCost = partsCost;

@@ -194,7 +194,7 @@ public class Invoice {
                 "  %-12s%-60s$%-12.2f$%-12.2f$%-12.2f$%-10.2f%n",
                 repair.getCode(),
                 String.format(
-                        "%s (%d hours of labor @ $%.2f/hour%n(+ $%.2f for parts",
+                        "%s (%d hours of labor @ $%.2f/hour%n(+ $%.2f for parts)",
                         repair.getLabel(),
                         invoiceProductData.getHoursWorked(),
                         repair.getHourlyLaborCost(),

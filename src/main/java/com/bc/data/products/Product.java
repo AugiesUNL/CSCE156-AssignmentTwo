@@ -9,13 +9,6 @@ public abstract class Product implements Discountable {
     private char type;
     private String label;
 
-    /**
-     * This is purposefully empty.
-     * Without this, gson cannot instantiate without creating a {@link com.google.gson.InstanceCreator}
-     */
-    public Product(){
-    }
-
     public Product(String code, char type, String label) {
         this.code = code;
         this.type = type;

@@ -7,14 +7,6 @@ public class Rental extends Product {
     private double deposit;
     private double cleaningFee;
 
-    /**
-     * This is purposefully empty.
-     * Without this, gson cannot instantiate without creating a {@link com.google.gson.InstanceCreator}
-     */
-    public Rental(){
-       super();
-    }
-
     public Rental(String code, String label, double dailyCost, double deposit, double cleaningFee) {
         super(code, 'R', label);
         this.dailyCost = dailyCost;

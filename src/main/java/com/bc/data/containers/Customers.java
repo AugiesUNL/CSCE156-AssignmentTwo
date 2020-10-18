@@ -9,7 +9,7 @@ import java.util.List;
  * Allows Gson to parse as Json Objects rather than Json Arrays
  */
 public class Customers {
-    private final List<Customer> customers;
+    private List<Customer> customers;
 
     public Customers(List<Customer> customers) {
         this.customers = customers;
@@ -17,5 +17,9 @@ public class Customers {
 
     public List<Customer> getCustomers() {
         return this.customers;
+    }
+
+    public void setCustomers(List<Customer> customers){
+        this.customers = customers;
     }
 }

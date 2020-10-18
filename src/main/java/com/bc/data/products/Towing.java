@@ -6,14 +6,6 @@ import com.bc.data.InvoiceProductData;
 public class Towing extends Product {
     private double costPerMile;
 
-    /**
-     * This is purposefully empty.
-     * Without this, gson cannot instantiate without creating a {@link com.google.gson.InstanceCreator}
-     */
-    public Towing(){
-        super();
-    }
-
     public Towing(String code, String label, double costPerMile) {
         super(code, 'T', label);
         this.costPerMile = costPerMile;
