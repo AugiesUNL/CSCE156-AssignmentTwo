@@ -39,6 +39,10 @@ public class Person {
         return String.format("Owner:%n%s, %s%n%s%n%s", lastName, firstName, emails.toString(), address);
     }
 
+    public String getName(){
+        return this.lastName + this.firstName;
+    }
+
     public String getCode() {
         return code;
     }

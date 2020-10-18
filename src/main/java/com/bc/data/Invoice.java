@@ -210,4 +210,62 @@ public class Invoice {
     public double getTaxRate() {
         return isPersonalCustomer() ? .08 : .0425;
     }
+    /**
+     * method to calculate invoice subtotal for invoice summary
+     * @return the invoice subtotal
+     */
+    public double getInvoiceSubtotal() {
+        double subtotal = 0;
+        for (Map.Entry<Product, InvoiceProductData> entry : products.entrySet()) {
+            subtotal += entry.getKey().getSubtotal(entry.getValue());
+        }
+        return subtotal;
+
+    }
+    /**
+     * method to calculate invoice discount for invoice summary
+     * @return the invoice discount
+     */
+    public double getInvoiceDiscount() {
+        double discount = 0;
+        for (Map.Entry<Product, InvoiceProductData> entry : products.entrySet()) {
+            discount += entry.getKey().getDiscount(entry.getValue(), this);
+        }
+        return discount;
+
+    }
+    /**
+     * method to calculate invoice fees for invoice summary
+     * @return the invoice fee
+     */
+    public double getInvoiceFees() {
+
+        return isPersonalCustomer() ? 0 : 75.5;
+
+    }
+    /**
+     * method to calculate invoice taxes for invoice summary
+     * @return the invoice taxes
+     */
+    public double getInvoiceTaxes() {
+        double taxes = 0;
+        for (Map.Entry<Product, InvoiceProductData> entry : products.entrySet()) {
+            taxes += entry.getKey().getTaxes(entry.getValue(), this);
+        }
+        return taxes;
+
+    }
+
+    /**
+     * method to calculate invoice total for invoice summary
+     * @return the invoice total
+     */
+    public double getInvoiceTotal() {
+        return getInvoiceSubtotal() + getInvoiceDiscount() + getInvoiceFees() + getInvoiceTaxes();
+    }
+
+    public Person getOwner()
+    {
+        return this.owner;
+    }
 }
