@@ -4,6 +4,7 @@ import com.bc.data.*;
 import com.bc.data.products.Product;
 import com.bc.data.products.Rental;
 import com.bc.data.products.Towing;
+import com.bc.io.handlers.InvoiceData;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,5 +46,7 @@ public class Scratch {
         invoices.add(invoice2);
 
         InvoiceReport.printSummary(invoices);
+
+        InvoiceData.removeAllPersons();
     }
 }
