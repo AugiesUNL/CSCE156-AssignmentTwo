@@ -1,6 +1,4 @@
-package com.bc.data.products;
-
-import com.bc.data.InvoiceProductData;
+package com.bc.model;
 
 public class Repair extends Product {
     private double partsCost;

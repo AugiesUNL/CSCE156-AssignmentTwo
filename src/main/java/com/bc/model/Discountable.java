@@ -1,7 +1,7 @@
-package com.bc.data.products.properties;
+package com.bc.model;
 
-import com.bc.data.Invoice;
-import com.bc.data.InvoiceProductData;
+import com.bc.model.Invoice;
+import com.bc.model.InvoiceProductData;
 
 public interface Discountable {
     default double getDiscount(InvoiceProductData invoiceProductData, Invoice invoice) {

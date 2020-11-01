@@ -1,6 +1,6 @@
-package com.bc.data.containers;
+package com.bc.model.containers;
 
-import com.bc.data.Invoice;
+import com.bc.model.Invoice;
 
 import java.util.List;
 

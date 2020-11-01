@@ -1,8 +1,4 @@
-package com.bc.data.products;
-
-import com.bc.data.Invoice;
-import com.bc.data.InvoiceProductData;
-import com.bc.data.products.properties.Discountable;
+package com.bc.model;
 
 public abstract class Product implements Discountable {
     private String code;

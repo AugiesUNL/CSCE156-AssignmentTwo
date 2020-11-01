@@ -1,14 +1,14 @@
 package com.bc.io.handlers;
 
 import com.bc.DataConverter;
-import com.bc.data.Customer;
-import com.bc.data.Invoice;
-import com.bc.data.Person;
-import com.bc.data.containers.Customers;
-import com.bc.data.containers.Invoices;
-import com.bc.data.containers.Persons;
-import com.bc.data.containers.Products;
-import com.bc.data.products.Product;
+import com.bc.model.Customer;
+import com.bc.model.Invoice;
+import com.bc.model.Person;
+import com.bc.model.containers.Customers;
+import com.bc.model.containers.Invoices;
+import com.bc.model.containers.Persons;
+import com.bc.model.containers.Products;
+import com.bc.model.Product;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

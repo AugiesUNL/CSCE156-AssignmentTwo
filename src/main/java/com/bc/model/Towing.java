@@ -1,7 +1,4 @@
-package com.bc.data.products;
-
-import com.bc.data.Invoice;
-import com.bc.data.InvoiceProductData;
+package com.bc.model;
 
 public class Towing extends Product {
     private double costPerMile;

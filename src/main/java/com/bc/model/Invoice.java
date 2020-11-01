@@ -1,6 +1,4 @@
-package com.bc.data;
-
-import com.bc.data.products.*;
+package com.bc.model;
 
 import java.util.Map;
 
@@ -173,7 +171,7 @@ public class Invoice {
                 "  %-12s%-60s$%-12.2f$%-12.2f$%-12.2f$%-10.2f%n",
                 rental.getCode(),
                 String.format(
-                        "%s (%-2d @ $%.2f/day)",
+                        "%s (%-2.2f @ $%.2f/day)",
                         rental.getLabel(),
                         invoiceProductData.getDaysRented(),
                         rental.getDailyCost()
@@ -194,7 +192,7 @@ public class Invoice {
                 "  %-12s%-60s$%-12.2f$%-12.2f$%-12.2f$%-10.2f%n",
                 repair.getCode(),
                 String.format(
-                        "%s (%d hours of labor @ $%.2f/hour%n(+ $%.2f for parts)",
+                        "%s (%.2f hours of labor @ $%.2f/hour%n(+ $%.2f for parts)",
                         repair.getLabel(),
                         invoiceProductData.getHoursWorked(),
                         repair.getHourlyLaborCost(),

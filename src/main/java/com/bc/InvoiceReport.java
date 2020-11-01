@@ -1,17 +1,19 @@
 package com.bc;
 
-import com.bc.data.Invoice;
+import com.bc.ext.DatabaseObjectLoader;
+import com.bc.model.Invoice;
 import com.bc.managers.IoManager;
 
 import java.util.List;
 
 public class InvoiceReport {
     public static void main(String[] args) {
-        IoManager ioManager = DataConverter.getIoManager();
-        List<Invoice> invoices = ioManager.getDatHandler().getInvoicesFromDat();
-        printSummary(invoices);
-        for (Invoice invoice : invoices) {
-            System.out.println(invoice.toString());
+        List<Invoice> invoices = DatabaseObjectLoader.getInvoicesFromDatabase();
+        if(invoices!=null){
+            printSummary(invoices);
+            for (Invoice invoice : invoices) {
+                System.out.println(invoice.toString());
+            }
         }
     }
 

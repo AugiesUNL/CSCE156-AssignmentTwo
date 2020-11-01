@@ -1,10 +1,9 @@
 package com.bc;
 
-import com.bc.data.*;
-import com.bc.data.products.Product;
-import com.bc.data.products.Rental;
-import com.bc.data.products.Towing;
-import com.bc.io.handlers.InvoiceData;
+import com.bc.model.*;
+import com.bc.model.Product;
+import com.bc.model.Rental;
+import com.bc.model.Towing;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +20,7 @@ public class Scratch {
         Towing product1 = new Towing("product1", "Towing Label", 13.52);
         Rental product2 = new Rental("product2", "Rental Label", 91.23, 200, 39.51);
         InvoiceProductData invoiceProductData1 = new InvoiceProductData(null, null, null, null, 123);
-        InvoiceProductData invoiceProductData2 = new InvoiceProductData(4, null, null, null, null);
+        InvoiceProductData invoiceProductData2 = new InvoiceProductData(4.0, null, null, null, null);
         Map<Product, InvoiceProductData> products = new HashMap<>();
         products.put(product1, invoiceProductData1);
         products.put(product2, invoiceProductData2);
@@ -35,7 +34,7 @@ public class Scratch {
         Towing product3 = new Towing("product1", "Towing Label", 13.52);
         Rental product4 = new Rental("product2", "Rental Label", 91.23, 200, 39.51);
         InvoiceProductData invoiceProductData3 = new InvoiceProductData(null, null, null, null, 123);
-        InvoiceProductData invoiceProductData4 = new InvoiceProductData(4, null, null, null, null);
+        InvoiceProductData invoiceProductData4 = new InvoiceProductData(4.0, null, null, null, null);
         Map<Product, InvoiceProductData> products2 = new HashMap<>();
         products.put(product3, invoiceProductData3);
         products.put(product4, invoiceProductData4);
@@ -46,7 +45,5 @@ public class Scratch {
         invoices.add(invoice2);
 
         InvoiceReport.printSummary(invoices);
-
-        InvoiceData.removeAllPersons();
     }
 }

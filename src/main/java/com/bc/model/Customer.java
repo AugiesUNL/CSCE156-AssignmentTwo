@@ -1,4 +1,4 @@
-package com.bc.data;
+package com.bc.model;
 
 public class Customer {
 

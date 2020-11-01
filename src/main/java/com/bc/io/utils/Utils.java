@@ -1,8 +1,8 @@
 package com.bc.io.utils;
 
-import com.bc.data.Customer;
-import com.bc.data.Person;
-import com.bc.data.products.Product;
+import com.bc.model.Customer;
+import com.bc.model.Person;
+import com.bc.model.Product;
 
 import java.util.List;
 

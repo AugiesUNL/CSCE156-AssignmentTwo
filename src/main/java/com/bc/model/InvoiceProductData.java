@@ -1,15 +1,13 @@
-package com.bc.data;
-
-import com.bc.data.products.Product;
+package com.bc.model;
 
 public class InvoiceProductData {
-    private final Integer daysRented;
-    private final Integer hoursWorked;
+    private final Double daysRented;
+    private final Double hoursWorked;
     private final Integer quantity;
     private final Product associatedRepair;
     private final Integer milesTowed;
 
-    public InvoiceProductData(Integer daysRented, Integer hoursWorked, Integer quantity, Product associatedRepair, Integer milesTowed) {
+    public InvoiceProductData(Double daysRented, Double hoursWorked, Integer quantity, Product associatedRepair, Integer milesTowed) {
         this.daysRented = daysRented;
         this.hoursWorked = hoursWorked;
         this.quantity = quantity;
@@ -17,11 +15,11 @@ public class InvoiceProductData {
         this.milesTowed = milesTowed;
     }
 
-    public Integer getDaysRented() {
+    public Double getDaysRented() {
         return daysRented;
     }
 
-    public Integer getHoursWorked() {
+    public Double getHoursWorked() {
         return hoursWorked;
     }
 

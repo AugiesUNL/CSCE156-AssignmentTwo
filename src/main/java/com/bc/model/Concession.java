@@ -1,7 +1,4 @@
-package com.bc.data.products;
-
-import com.bc.data.Invoice;
-import com.bc.data.InvoiceProductData;
+package com.bc.model;
 
 public class Concession extends Product {
     private double unitCost;

@@ -1,8 +1,7 @@
 package com.bc.io.handlers;
 
 import com.bc.DataConverter;
-import com.bc.data.*;
-import com.bc.data.products.*;
+import com.bc.model.*;
 import com.bc.io.utils.Utils;
 
 import java.io.File;
@@ -74,10 +73,10 @@ public class DatHandler {
             InvoiceProductData invoiceProductData = new InvoiceProductData(null, null, null, null, null);
             if (product instanceof Rental) {
                 int daysRented = Integer.parseInt(productEntryData.get(1));
-                invoiceProductData = new InvoiceProductData(daysRented, null, null, null, null);
+                invoiceProductData = new InvoiceProductData(Double.valueOf(daysRented), null, null, null, null);
             } else if (product instanceof Repair) {
                 int hoursWorked = Integer.parseInt(productEntryData.get(1));
-                invoiceProductData = new InvoiceProductData(null, hoursWorked, null, null, null);
+                invoiceProductData = new InvoiceProductData(null, Double.valueOf(hoursWorked), null, null, null);
             } else if (product instanceof Concession) {
                 int quantity = Integer.parseInt(productEntryData.get(1));
                 Product associatedRepair = productEntryData.size() == 3 ? Utils.getProductWithCode(allProducts, productEntryData.get(2)) : null;
