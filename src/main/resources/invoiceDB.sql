@@ -300,7 +300,7 @@ VALUES(
       );
 
 #String personCode, String firstName, String lastName, String street, String city, String state, String zip, String country
-CREATE PROCEDURE addPerson(personCode VARCHAR(20), firstName VARCHAR(50), lastName VARCHAR(50), street VARCHAR(200), cityName VARCHAR(200), stateName VARCHAR(50), zipCode VARCHAR(20), countryName VARCHAR(50))
+CREATE PROCEDURE addPerson(personCode VARCHAR(20), firstName VARCHAR(50), lastName VARCHAR(50), streetName VARCHAR(200), cityName VARCHAR(200), stateName VARCHAR(50), zipCode VARCHAR(20), countryName VARCHAR(50))
 BEGIN
     SET @countryId = (SELECT Country.countryId FROM Country WHERE Country.name = countryName LIMIT 1);
     IF(@countryId IS NULL) THEN
@@ -317,13 +317,13 @@ BEGIN
     #Addresses get changed often enough that making a new address for each person simplifies the design
     #It makes changing a customer/owner's address a simple update statement
     #Compared to using the same addressId if two customers share an address
-    INSERT INTO Address(street, city, zip, stateId) VALUES(street,city,zipCode,@stateId);
+    INSERT INTO Address(street, city, zip, stateId) VALUES(streetName,cityName,zipCode,@stateId);
     SET @addressId = LAST_INSERT_ID();
 
     INSERT INTO Person(personCode, lastName, firstName, addressId) VALUES(personCode,lastName,firstName,@addressId);
 END;
 
-CREATE PROCEDURE addCustomer(customerCode VARCHAR(20), customerType CHAR, primaryContactPersonCode VARCHAR(20), name VARCHAR(200), street VARCHAR(200), cityName VARCHAR(200), stateName VARCHAR(50), zipCode VARCHAR(20), countryName VARCHAR(50))
+CREATE PROCEDURE addCustomer(customerCode VARCHAR(20), customerType CHAR, primaryContactPersonCode VARCHAR(20), name VARCHAR(200), streetName VARCHAR(200), cityName VARCHAR(200), stateName VARCHAR(50), zipCode VARCHAR(20), countryName VARCHAR(50))
 BEGIN
     SET @countryId = (SELECT Country.countryId FROM Country WHERE Country.name = countryName LIMIT 1);
     IF(@countryId IS NULL) THEN
@@ -340,7 +340,7 @@ BEGIN
     #Addresses get changed often enough that making a new address for each customer simplifies the design
     #It makes changing a customer/owner's address a simple update statement
     #Compared to using the same addressId if two customers share an address
-    INSERT INTO Address(street, city, zip, stateId) VALUES(street,city,zipCode,@stateId);
+    INSERT INTO Address(street, city, zip, stateId) VALUES(streetName,cityName,zipCode,@stateId);
     SET @addressId = LAST_INSERT_ID();
 
     SET @personId = (SELECT personId FROM Person WHERE personCode = primaryContactPersonCode);

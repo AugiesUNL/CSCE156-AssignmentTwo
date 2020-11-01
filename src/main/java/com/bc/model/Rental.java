@@ -38,6 +38,6 @@ public class Rental extends Product {
 
     @Override
     public double getSubtotal(InvoiceProductData invoiceProductData) {
-        return getCleaningFee() + getDeposit() + getDailyCost() * invoiceProductData.getDaysRented();
+        return getCleaningFee() + getDailyCost() * invoiceProductData.getDaysRented() - getDeposit();
     }
 }

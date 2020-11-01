@@ -27,8 +27,8 @@ public class Invoice {
         return products;
     }
 
-    public boolean isPersonalCustomer() {
-        return customer.getType() == 'P';
+    public boolean isBusinessCustomer() {
+        return customer.getType() != 'B';
     }
 
     public boolean hasConcessionWithAssociatedRepair() {
@@ -67,7 +67,6 @@ public class Invoice {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Invoice Details:\n");
         stringBuilder.append("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n");
         stringBuilder.append(String.format("Invoice %s%n", code));
         stringBuilder.append("-----------------------------------------\n");
@@ -102,13 +101,13 @@ public class Invoice {
                     break;
                 case 'T':
                     Towing towing = (Towing) product;
-                    stringBuilder.append("\n").append(getTowingStringEntry(towing, invoiceProductData));
+                    stringBuilder.append("\nTOWINGTOWINGTOWING").append(getTowingStringEntry(towing, invoiceProductData));
                     break;
             }
         }
         stringBuilder.append("======================================================================================================================================");
         stringBuilder.append(String.format("%n%-74s$%-12.2f$%-12.2f$%-12.2f$%.2f", "Item Totals:", subtotal, discount, taxes, total));
-        double accountFee = isPersonalCustomer() ? 0 : 75.5;
+        double accountFee = !isBusinessCustomer() ? 0 : 75.5;
         if (accountFee > 0) {
             stringBuilder.append(String.format("%nBusiness Account Fee: $%.2f", accountFee));
         }
@@ -117,6 +116,7 @@ public class Invoice {
             stringBuilder.append(String.format("%nLoyal Customer Discount (5%% OFF): -$%.2f", (-1 * loyalCustomerDiscount)));
         }
         stringBuilder.append(String.format("%nGRAND TOTAL: $%.2f", (total + loyalCustomerDiscount + accountFee)));
+        stringBuilder.append("\n\n        THANK YOU FOR DOING BUSINESS WITH US!\n\n\n");
         return stringBuilder.toString();
     }
 
@@ -206,7 +206,7 @@ public class Invoice {
     }
 
     public double getTaxRate() {
-        return isPersonalCustomer() ? .08 : .0425;
+        return !isBusinessCustomer() ? .08 : .0425;
     }
     /**
      * method to calculate invoice subtotal for invoice summary
@@ -238,7 +238,7 @@ public class Invoice {
      */
     public double getInvoiceFees() {
 
-        return isPersonalCustomer() ? 0 : 75.5;
+        return !isBusinessCustomer() ? 0 : 75.5;
 
     }
     /**

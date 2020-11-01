@@ -244,6 +244,7 @@ public class DatabaseObjectLoader {
                             resultSet.getDouble("deposit"),
                             resultSet.getDouble("cleaningFee")
                     );
+                    break;
                 case 'F': //Repair
                 	product = new Repair(
                             productCode,
@@ -251,18 +252,21 @@ public class DatabaseObjectLoader {
                             resultSet.getDouble("partsCost"),
                             resultSet.getDouble("hourlyLaborCost")
                     );
+                	break;
                 case 'C': //Concession
                 	product = new Concession(
                             productCode,
                             label,
                             resultSet.getDouble("unitCost")
                     );
+                	break;
                 case 'T':
                 	product = new Towing(
                             productCode,
                             label,
                             resultSet.getDouble("costPerMile")
                     );
+                	break;
             }
         } catch(SQLException e){
             e.printStackTrace();

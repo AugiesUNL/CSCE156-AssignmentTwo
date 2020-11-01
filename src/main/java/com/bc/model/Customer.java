@@ -57,6 +57,6 @@ public class Customer {
                 accountDescription = "(Unknown Account)";
                 break;
         }
-        return String.format("Customer:%n%s %s%n%s", name, accountDescription, address.toString());
+        return String.format("Customer:%n        %s %s%n        %s", name, accountDescription, address.toString());
     }
 }

@@ -9,6 +9,12 @@ import java.util.List;
 public class InvoiceReport {
     public static void main(String[] args) {
         List<Invoice> invoices = DatabaseObjectLoader.getInvoicesFromDatabase();
+        for(int i = 0; i < invoices.size()/2; i++) {
+        	int opposingIndex = invoices.size()-1-i;
+        	Invoice temp = invoices.get(i);
+        	invoices.set(i, invoices.get(opposingIndex));
+        	invoices.set(opposingIndex, temp);
+        }
         if(invoices!=null){
             printSummary(invoices);
             for (Invoice invoice : invoices) {
@@ -28,8 +34,8 @@ public class InvoiceReport {
         double taxes = 0;
         double discounts = 0;
         double total = 0;
-        System.out.println("Executive summary report:");
-        System.out.printf("%-10s%-30s%-32s%-12s%-12s%-12s%-12s%-12s%n","Code","Owner","Customer Account","Subtotal", "Discounts","Fees","Taxes","Total");
+        System.out.println("Executive summary report:\n");
+        System.out.printf("%-17s%-30s%-32s%-12s%-12s%-12s%-12s%-12s%n","Code","Owner","Customer Account","Subtotal", "Discounts","Fees","Taxes","Total");
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
 
 
@@ -40,10 +46,11 @@ public class InvoiceReport {
             taxes += i.getInvoiceTaxes();
             discounts += i.getInvoiceDiscount();
             total += i.getInvoiceTotal();
-            System.out.printf("%-10s%-30s%-32s%-12.2f%-12.2f%-12.2f%-12.2f%-12.2f%n",i.getCode(),i.getOwner().getName(),i.getCustomer().getName(),i.getInvoiceSubtotal(),i.getInvoiceDiscount(),i.getInvoiceFees(),i.getInvoiceTaxes(),i.getInvoiceTotal());
+            System.out.printf("%-17s%-30s%-32s%-12.2f%-12.2f%-12.2f%-12.2f%-12.2f%n",i.getCode(),i.getOwner().getName(),i.getCustomer().getName(),i.getInvoiceSubtotal(),i.getInvoiceDiscount(),i.getInvoiceFees(),i.getInvoiceTaxes(),i.getInvoiceTotal());
         }
         System.out.println("================================================================================================================================");
-        System.out.printf("%-72s%-12.2f%-12.2f%-12.2f%-12.2f%-12.2f%n","TOTALS",subtotal,discounts,fees,taxes,total);
+        System.out.printf("%-72s%-12.2f%-12.2f%-12.2f%-12.2f%-12.2f%n%n%n%n","TOTALS",subtotal,discounts,fees,taxes,total);
+        System.out.println("Invoice Details:\n");
     }
 }
 /*

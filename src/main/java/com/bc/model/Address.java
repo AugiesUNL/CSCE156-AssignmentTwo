@@ -46,7 +46,7 @@ public class Address {
      * @return the String representation of the Address
      */
     public String toString() {
-        return street + "\n" + city + ", " + state + " " + country + " " + zip;
+        return street + "\n        " + city + ", " + state + " " + country + " " + zip;
     }
 
     public String getStreet() {

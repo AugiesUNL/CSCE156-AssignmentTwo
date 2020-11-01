@@ -36,11 +36,12 @@ public class Person {
      */
     @Override
     public String toString() {
-        return String.format("Owner:%n%s, %s%n%s%n%s", lastName, firstName, emails.toString(), address);
+        String emailsString = emails.size() > 0 ? emails.toString() : "[no emails on record]";
+        return String.format("Owner:%n        %s, %s%n        %s%n        %s", lastName, firstName, emailsString, address);
     }
 
     public String getName(){
-        return this.lastName + this.firstName;
+        return this.lastName + ", " + this.firstName;
     }
 
     public String getCode() {
