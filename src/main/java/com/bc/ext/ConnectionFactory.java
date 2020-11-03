@@ -11,8 +11,8 @@ import java.sql.SQLException;
 public class ConnectionFactory {
 	private static boolean initializedDriver = false;
     private static final String PARAMETERS = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-    private static final String USERNAME = "";
-	private static final String PASSWORD = "";
+    private static final String USERNAME = "ashald";
+	private static final String PASSWORD = "z3d-CB";
 	private static final String URL = "jdbc:mysql://cse.unl.edu/" + USERNAME + PARAMETERS;
 
     public static Connection getConnection() {

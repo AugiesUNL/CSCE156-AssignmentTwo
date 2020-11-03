@@ -24,8 +24,8 @@ public class Concession extends Product {
     @Override
     public double getDiscount(InvoiceProductData invoiceProductData, Invoice invoice) {
         double discount = 0;
-        if (invoice.hasConcessionWithAssociatedRepair()) {
-            discount -= getSubtotal(invoiceProductData) * .1;
+        if(invoiceProductData.getAssociatedRepair()!=null) {
+        	discount-=getSubtotal(invoiceProductData)*.1;
         }
         return discount;
     }

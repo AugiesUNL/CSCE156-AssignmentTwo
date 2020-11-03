@@ -36,7 +36,6 @@ public class Customer {
         return type;
     }
 
-
     /*
     Customer:
 	State of Nebraska (Business Account)

@@ -28,16 +28,7 @@ public class Invoice {
     }
 
     public boolean isBusinessCustomer() {
-        return customer.getType() != 'B';
-    }
-
-    public boolean hasConcessionWithAssociatedRepair() {
-        for (Map.Entry<Product, InvoiceProductData> product : products.entrySet()) {
-            if (product.getValue().getAssociatedRepair() != null) {
-                return true;
-            }
-        }
-        return false;
+        return customer.getType() == 'B';
     }
 
     public boolean hasTowingRepairRental() {
@@ -61,7 +52,7 @@ public class Invoice {
     }
 
     public boolean isLoyalCustomer() {
-        return customer.getContact().getEmails().size() > 1;
+        return customer.getType() == 'P' && customer.getContact().getEmails().size() > 1;
     }
 
     @Override
@@ -101,17 +92,17 @@ public class Invoice {
                     break;
                 case 'T':
                     Towing towing = (Towing) product;
-                    stringBuilder.append("\nTOWINGTOWINGTOWING").append(getTowingStringEntry(towing, invoiceProductData));
+                    stringBuilder.append("\n").append(getTowingStringEntry(towing, invoiceProductData));
                     break;
             }
         }
         stringBuilder.append("======================================================================================================================================");
         stringBuilder.append(String.format("%n%-74s$%-12.2f$%-12.2f$%-12.2f$%.2f", "Item Totals:", subtotal, discount, taxes, total));
-        double accountFee = !isBusinessCustomer() ? 0 : 75.5;
+        double accountFee = isBusinessCustomer() ? 75.5 : 0;
         if (accountFee > 0) {
             stringBuilder.append(String.format("%nBusiness Account Fee: $%.2f", accountFee));
         }
-        double loyalCustomerDiscount = isLoyalCustomer() ? -1 * .05 * total : 0;
+        double loyalCustomerDiscount = isLoyalCustomer() ? -.05 * total : 0;
         if (loyalCustomerDiscount != 0) {
             stringBuilder.append(String.format("%nLoyal Customer Discount (5%% OFF): -$%.2f", (-1 * loyalCustomerDiscount)));
         }
@@ -171,10 +162,12 @@ public class Invoice {
                 "  %-12s%-60s$%-12.2f$%-12.2f$%-12.2f$%-10.2f%n",
                 rental.getCode(),
                 String.format(
-                        "%s (%-2.2f @ $%.2f/day)",
+                        "%s (%.2f days @ $%.2f/day) (+ $%.2f cleaning fee, $%.2f deposit refund)",
                         rental.getLabel(),
                         invoiceProductData.getDaysRented(),
-                        rental.getDailyCost()
+                        rental.getDailyCost(),
+                        rental.getCleaningFee(),
+                        -1*rental.getDeposit()
                 ),
                 subtotal,
                 discount,
@@ -206,8 +199,9 @@ public class Invoice {
     }
 
     public double getTaxRate() {
-        return !isBusinessCustomer() ? .08 : .0425;
+        return isBusinessCustomer() ? .0425 : .08;
     }
+
     /**
      * method to calculate invoice subtotal for invoice summary
      * @return the invoice subtotal
@@ -226,11 +220,15 @@ public class Invoice {
      */
     public double getInvoiceDiscount() {
         double discount = 0;
+        double total = 0;
+        for (Map.Entry<Product, InvoiceProductData> productEntry : products.entrySet()) { //I use this instead of getInvoiceTotal to avoid stackOverflow
+            total+=productEntry.getKey().getTotal(productEntry.getValue(),this);
+        }
+        double loyalCustomerDiscount = isLoyalCustomer() ? -.05 * total : 0;
         for (Map.Entry<Product, InvoiceProductData> entry : products.entrySet()) {
             discount += entry.getKey().getDiscount(entry.getValue(), this);
         }
-        return discount;
-
+        return discount+loyalCustomerDiscount;
     }
     /**
      * method to calculate invoice fees for invoice summary

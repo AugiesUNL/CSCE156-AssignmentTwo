@@ -55,6 +55,6 @@ public abstract class Product implements Discountable {
     }
 
     public double getTotal(InvoiceProductData invoiceProductData, Invoice invoice) {
-        return getTotalBeforeTaxes(invoiceProductData, invoice) - getTaxes(invoiceProductData, invoice);
+        return getTotalBeforeTaxes(invoiceProductData, invoice) + getTaxes(invoiceProductData, invoice);
     }
 }

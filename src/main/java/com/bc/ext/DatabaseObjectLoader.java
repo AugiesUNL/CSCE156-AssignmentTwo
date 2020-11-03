@@ -40,6 +40,30 @@ public class DatabaseObjectLoader {
         return invoices;
     }
 
+    public static Product getAssociatedRepairProduct(int invoiceProductDataId){
+        Connection connection = ConnectionFactory.getConnection();
+        if(connection==null){
+            return null;
+        }
+
+        Product product = null;
+        String getProductQuery = "SELECT productId FROM InvoiceProductsData WHERE invoiceProductsDataId = ?";
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(getProductQuery);
+            preparedStatement.setInt(1,invoiceProductDataId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                product = getProduct(resultSet.getInt("productId"));
+            }
+            connection.close();
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+
+        return product;
+    }
+
     public static Map<Product,InvoiceProductData> getProductsForInvoice(int invoiceId){
         Connection connection = ConnectionFactory.getConnection();
         if(connection==null) {
@@ -47,7 +71,7 @@ public class DatabaseObjectLoader {
         }
         Map<Product,InvoiceProductData> products = new HashMap<>();
 
-        String getInvoiceProductsDataQuery = "SELECT * FROM InvoiceProductsData WHERE invoiceId = ?";
+        String getInvoiceProductsDataQuery = "SELECT * FROM InvoiceProductsData IPD WHERE invoiceId = ?";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(getInvoiceProductsDataQuery);
@@ -60,7 +84,7 @@ public class DatabaseObjectLoader {
                         resultSet.getDouble("daysRented"),
                         resultSet.getDouble("hoursWorked"),
                         resultSet.getInt("quantity"),
-                        getProduct(resultSet.getInt("associatedRepairId")),
+                        getAssociatedRepairProduct(resultSet.getInt("associatedRepairId")),
                         resultSet.getInt("milesTowed")
                 );
                 products.put(product,invoiceProductData);
