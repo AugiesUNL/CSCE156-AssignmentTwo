@@ -11,8 +11,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class responsible for interacting with the database to pull data.
+ */
 public class DatabaseObjectLoader {
 
+    /**
+     * Gets a list of all the invoices stored within the database
+     * @return the list of invoices
+     */
     public static List<Invoice> getInvoicesFromDatabase(){
         Connection connection = ConnectionFactory.getConnection();
         if(connection==null){
@@ -40,7 +47,12 @@ public class DatabaseObjectLoader {
         return invoices;
     }
 
-    public static Product getAssociatedRepairProduct(int invoiceProductDataId){
+    /**
+     * Gets the product associated with the invoiceProductData
+     * @param invoiceProductDataId the primary key of the InvoiceProductData entry
+     * @return the product
+     */
+    public static Product getProductForData(int invoiceProductDataId){
         Connection connection = ConnectionFactory.getConnection();
         if(connection==null){
             return null;
@@ -64,6 +76,11 @@ public class DatabaseObjectLoader {
         return product;
     }
 
+    /**
+     * Fetches all products pertaining to an invoice
+     * @param invoiceId the primary key of the invoice entry
+     * @return the list of all the products and their corresponding invoiceProductData
+     */
     public static Map<Product,InvoiceProductData> getProductsForInvoice(int invoiceId){
         Connection connection = ConnectionFactory.getConnection();
         if(connection==null) {
@@ -84,7 +101,7 @@ public class DatabaseObjectLoader {
                         resultSet.getDouble("daysRented"),
                         resultSet.getDouble("hoursWorked"),
                         resultSet.getInt("quantity"),
-                        getAssociatedRepairProduct(resultSet.getInt("associatedRepairId")),
+                        getProductForData(resultSet.getInt("associatedRepairId")),
                         resultSet.getInt("milesTowed")
                 );
                 products.put(product,invoiceProductData);
@@ -96,6 +113,11 @@ public class DatabaseObjectLoader {
         return products;
     }
 
+    /**
+     * Gets a product
+     * @param productId the primary key of the product to retrieve
+     * @return the product object
+     */
     public static Product getProduct(int productId){
     	Product product = null;
         Connection connection = ConnectionFactory.getConnection();
@@ -120,6 +142,11 @@ public class DatabaseObjectLoader {
         return product;
     }
 
+    /**
+     * Gets a customer
+     * @param customerId the primary key of the customer to retrieve
+     * @return the customer object
+     */
     public static Customer getCustomer(int customerId){
     	Customer customer = null;
         Connection connection = ConnectionFactory.getConnection();
@@ -149,6 +176,11 @@ public class DatabaseObjectLoader {
         return customer;
     }
 
+    /**
+     * Gets a person
+     * @param personId the primary key of the person to retrieve
+     * @return the person object
+     */
     public static Person getPerson(int personId){
     	Person person = null;
         Connection connection = ConnectionFactory.getConnection();
@@ -179,6 +211,11 @@ public class DatabaseObjectLoader {
         return person;
     }
 
+    /**
+     * Gets an address
+     * @param addressId the primary key of the address to retrieve
+     * @return the address object
+     */
     public static Address getAddress(int addressId){
     	Address address = null;
         Connection connection = ConnectionFactory.getConnection();
@@ -222,6 +259,11 @@ public class DatabaseObjectLoader {
         return address;
     }
 
+    /**
+     * Gets emails pertaining to a person
+     * @param personId the primary key of the person
+     * @return the corresponding list of emails
+     */
     public static List<String> getEmailsForPerson(int personId){
         Connection connection = ConnectionFactory.getConnection();
         if(connection==null){

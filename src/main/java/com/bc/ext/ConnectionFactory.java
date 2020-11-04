@@ -15,6 +15,10 @@ public class ConnectionFactory {
 	private static final String PASSWORD = "z3d-CB";
 	private static final String URL = "jdbc:mysql://cse.unl.edu/" + USERNAME + PARAMETERS;
 
+	/**
+	 * Get a valid database connection
+	 * @return a new connection
+	 */
     public static Connection getConnection() {
     	try {
     		if(!initializedDriver){

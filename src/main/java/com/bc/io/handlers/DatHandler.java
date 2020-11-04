@@ -7,6 +7,9 @@ import com.bc.io.utils.Utils;
 import java.io.File;
 import java.util.*;
 
+/**
+ * Class to parse to/from the dat representations of objects
+ */
 public class DatHandler {
     private static final File CUSTOMERS_DAT_FILE = new File("./data/Customers.dat");
     private static final File INVOICES_DAT_FILE = new File("./data/Invoices.dat");
@@ -48,6 +51,14 @@ public class DatHandler {
         return customers;
     }
 
+    /**
+     * Deserializes an individual invoice entry
+     * @param invoiceString the line of the dat file to parse
+     * @param allPeople a list of all people, to ensure objects reference one another
+     * @param allCustomers a list of all customers, to ensure objects reference one another
+     * @param allProducts a list of all products, to ensure objects reference one another
+     * @return the Invoice object
+     */
     public Invoice deserializeInvoice(String invoiceString, List<Person> allPeople, List<Customer> allCustomers, List<Product> allProducts) {
         List<String> invoiceData = Arrays.asList(invoiceString.split(";"));
 
@@ -63,6 +74,12 @@ public class DatHandler {
         return new Invoice(invoiceCode, owner, customer, invoiceProducts);
     }
 
+    /**
+     * Deserializes a Product from its dat representation
+     * @param productListString the string to deserialize
+     * @param allProducts all of the products
+     * @return a map with the product and its data
+     */
     private Map<Product, InvoiceProductData> deserializeProductData(String productListString, List<Product> allProducts) {
         String[] productStringEntries = productListString.split(",");
         Map<Product, InvoiceProductData> products = new HashMap<>();
@@ -92,6 +109,10 @@ public class DatHandler {
         return products;
     }
 
+    /**
+     * Gets all invoices from the dat file
+     * @return the invoices
+     */
     public List<Invoice> getInvoicesFromDat() {
         System.out.println("Converting Invoices.dat...");
         List<Invoice> invoices = new ArrayList<>();

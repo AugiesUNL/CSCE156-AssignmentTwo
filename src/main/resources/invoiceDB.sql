@@ -406,17 +406,3 @@ BEGIN
 
     INSERT INTO InvoiceProductsData(productId, invoiceId, daysRented) VALUES(@productId, @invoiceId, daysRented);
 END;
-
-
-
-SELECT IPD.productId AS productId,
-       IPD.daysRented AS daysRented,
-       IPD.hoursWorked AS hoursWorked,
-       IPD.quantity AS quantity,
-       IPD.milesTowed AS milesTowed,
-       P.productId AS associatedRepairId
-FROM InvoiceProductsData IPD
-    LEFT JOIN InvoiceProductsData I on IPD.associatedRepairId = I.invoiceProductsDataId
-    LEFT JOIN Products P ON I.productId = P.productId
-AND IPD.invoiceId = 54
-AND I.invoiceId = 54

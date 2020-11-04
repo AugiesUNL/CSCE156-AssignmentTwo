@@ -6,7 +6,15 @@ import com.bc.managers.IoManager;
 
 import java.util.List;
 
+/**
+ * Class to print out all the invoices
+ */
 public class InvoiceReport {
+
+    /**
+     * Prints a summary of all invoices, then each invoice's individual breakdown
+     * @param args the program arguments
+     */
     public static void main(String[] args) {
         List<Invoice> invoices = DatabaseObjectLoader.getInvoicesFromDatabase();
         for(int i = 0; i < invoices.size()/2; i++) {
@@ -53,14 +61,3 @@ public class InvoiceReport {
         System.out.println("Invoice Details:\n");
     }
 }
-/*
-Executive Summary Report:
-Code      Owner                         Customer Account               Subtotal    Discounts   Fees        Taxes       Total
---------------------------------------------------------------------------------------------------------------------------------
-INV001    Battle, Petra                 State of Nebraska             $   368.39  $   -63.00  $    75.50  $    12.98  $   393.87
-INV002    Spooner, Kenan                Fenton Industries             $   908.50  $     0.00  $     0.00  $    72.68  $   981.18
-INV003    Battle, Petra                 Juno Stephenson               $   120.00  $    -6.48  $     0.00  $     9.60  $   123.12
-INV004    Medrano, Wiktoria             Demolition Derby              $  9145.00  $     0.00  $    75.50  $   388.66  $  9609.16
-================================================================================================================================
-TOTALS
- */
