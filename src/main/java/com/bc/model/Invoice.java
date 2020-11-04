@@ -12,12 +12,11 @@ public class Invoice {
     private final Map<Product, InvoiceProductData> products;
 
     /**
-     *
-     * @param code
-     * @param owner
-     * @param customer
-     * @param products
-     * invoice constructor
+     *invoice constructor
+     * @param code string value pertaining to ordering of invoices
+     * @param owner person object attached to invoice
+     * @param customer customer of the invoice
+     * @param products product items that make up the invoice
      */
     public Invoice(String code, Person owner, Customer customer, Map<Product, InvoiceProductData> products) {
         this.code = code;
@@ -28,7 +27,7 @@ public class Invoice {
 
     /**
      * a method to get invoice code
-     * @return
+     * @return invoice code string
      */
     public String getCode() {
         return code;
@@ -36,7 +35,7 @@ public class Invoice {
 
     /**
      * a method to get customer object associated with the invoice
-     * @return
+     * @return a customer object
      */
     public Customer getCustomer() {
         return customer;
@@ -44,7 +43,7 @@ public class Invoice {
 
     /**
      * a method to get a map of the products associated with the invoice
-     * @return
+     * @return a map of products
      */
     public Map<Product, InvoiceProductData> getProducts() {
         return products;
@@ -52,7 +51,7 @@ public class Invoice {
 
     /**
      * a method to get the type of customer associated with the invoice
-     * @return
+     * @return boolean value of if a customer is a business
      */
     public boolean isBusinessCustomer() {
         return customer.getType() == 'B';
@@ -60,7 +59,7 @@ public class Invoice {
 
     /**
      * a method to get a boolean result pertaining to if an invoice has a towing, repair, and rental product
-     * @return
+     * @return boolean value of if an invoice has towing,repair,rental
      */
     public boolean hasTowingRepairRental() {
         boolean hasTowing = false;
@@ -84,7 +83,7 @@ public class Invoice {
 
     /**
      * a method to get a boolean result pertaining to whether or not a customer is eligible for the loyal customer discount
-     * @return
+     * @return boolean value of whether a customer is loyal
      */
     public boolean isLoyalCustomer() {
         return customer.getType() == 'P' && customer.getContact().getEmails().size() > 1;
@@ -92,7 +91,7 @@ public class Invoice {
 
     /**
      * to string method
-     * @return
+     * @return invoice as a string
      */
     @Override
     public String toString() {
@@ -152,9 +151,9 @@ public class Invoice {
 
     /**
      * to string method for a towing entry
-     * @param towing
-     * @param invoiceProductData
-     * @return
+     * @param towing to reference the towing in the invoice
+     * @param invoiceProductData data pertaining to the towing
+     * @return towing entry as a string
      */
     public String getTowingStringEntry(Towing towing, InvoiceProductData invoiceProductData) {
         double subtotal = towing.getSubtotal(invoiceProductData);
@@ -179,9 +178,9 @@ public class Invoice {
 
     /**
      * to string method for the concession entry
-     * @param concession
-     * @param invoiceProductData
-     * @return
+     * @param concession to reference the concession in the invoice
+     * @param invoiceProductData data pertaining to the concession
+     * @return concession entry as a string
      */
     public String getConcessionStringEntry(Concession concession, InvoiceProductData invoiceProductData) {
         double subtotal = concession.getSubtotal(invoiceProductData);
@@ -206,9 +205,9 @@ public class Invoice {
 
     /**
      * to string method for the rental entry
-     * @param rental
-     * @param invoiceProductData
-     * @return
+     * @param rental to reference the rental in the invoice
+     * @param invoiceProductData data pertaining to the rental
+     * @return rental entry as a string
      */
     public String getRentalStringEntry(Rental rental, InvoiceProductData invoiceProductData) {
         double subtotal = rental.getSubtotal(invoiceProductData);
@@ -235,9 +234,9 @@ public class Invoice {
 
     /**
      * to string method for the repair entry
-     * @param repair
-     * @param invoiceProductData
-     * @return
+     * @param repair to reference the repair in the invoice
+     * @param invoiceProductData data pertaining to the repair
+     * @return repair entry as a string
      */
     public String getRepairStringEntry(Repair repair, InvoiceProductData invoiceProductData) {
         double subtotal = repair.getSubtotal(invoiceProductData);
@@ -263,7 +262,7 @@ public class Invoice {
 
     /**
      * a method to get the tax rate of a certain invoice
-     * @return
+     * @return the invoice tax rate
      */
     public double getTaxRate() {
         return isBusinessCustomer() ? .0425 : .08;
@@ -329,7 +328,7 @@ public class Invoice {
 
     /**
      * method to get the person object that is the owner of the business of the company in the invoice
-     * @return
+     * @return the owner of the business
      */
     public Person getOwner()
     {
